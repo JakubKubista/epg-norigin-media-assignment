@@ -6,7 +6,9 @@ Assignment about Frontend SW Engineer position for Norigin Media company.
 ## Basics
 
 • Assignment repository: https://github.com/JakubKubista/candidate-tester
+
 • Location: Oslo, NO
+
 • Interviewer: Espen Erikstad
 
 ## Settings
