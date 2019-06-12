@@ -1,4 +1,4 @@
-# Epg Norigin Media assignment
+# EPG Norigin Media assignment
 Assignment about Frontend SW Engineer position for Norigin Media company.
 
 ---
