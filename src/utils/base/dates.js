@@ -7,6 +7,12 @@
 import Constants from './constants';
 
 export default {
+
+  getDateInOrder(order) {
+    let date = new Date();
+    return new Date((date.setDate(date.getDate() - 10 + order)));
+  },
+
   /**
    * Format date into string with date and month
    *
@@ -14,21 +20,28 @@ export default {
    * @param {date} date
    * @return {string} day and month
    */
-
-  formatDate(date) {
+  getDayAndMonth(date) {
+    console.log(date);
     let dd = String(date.getDate()).padStart(2, '0');
     let mm = String(date.getMonth() + 1).padStart(2, '0');
 
     return dd + '.' + mm + '.';
   },
 
+  getDayAndMonthInOrder(order) {
+    return this.getDayAndMonth(
+      this.getDateInOrder(order)
+    );
+  },
+
   getDayOfWeek(date) {
     return Constants.days[date.getDay()].substr(0, 3);
   },
 
-  getDate() {
-    let date = new Date();
-    let dateFormated = this.formatDate(date) + "\n" + this.getDayOfWeek(date);
-    return dateFormated;
+  getDayOfWeekInOrder(order) {
+    return this.getDayOfWeek(
+      this.getDateInOrder(order)
+    );
   }
+
 };

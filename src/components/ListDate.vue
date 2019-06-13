@@ -8,9 +8,9 @@
            :key="i"
            :href="'#tab-' + i"
            style="text-transform: capitalize">
-      {{ dates.getDayOfWeek(today) }}
+      {{ dates.getDayOfWeekInOrder(i) }}
       <br>
-      {{ dates.formatDate(today) }}
+      {{ dates.getDayAndMonthInOrder(i) }}
     </v-tab>
 
     <v-tabs-items>
