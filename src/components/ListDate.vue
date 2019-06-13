@@ -1,14 +1,22 @@
 <template>
-  <v-tabs dark color="$color-secondary" show-arrows>
+  <v-tabs dark
+          color="$color-secondary"
+          show-arrows>
     <v-tabs-slider color="$color-secondary"></v-tabs-slider>
 
-    <v-tab v-for="i in 30" :key="i" :href="'#tab-' + i">
-      {{ i }}
-      {{ dates.getDate() }}
+    <v-tab v-for="i in 30"
+           :key="i"
+           :href="'#tab-' + i"
+           style="text-transform: capitalize">
+      {{ dates.getDayOfWeek(today) }}
+      <br>
+      {{ dates.formatDate(today) }}
     </v-tab>
 
     <v-tabs-items>
-      <v-tab-item v-for="i in 30" :key="i" :value="'tab-' + i">
+      <v-tab-item v-for="i in 30"
+                  :key="i"
+                  :value="'tab-' + i">
         <v-card flat>
           <v-card-text>{{ content }}</v-card-text>
         </v-card>
@@ -24,6 +32,7 @@ export default {
   name: "my-button-vuetify",
   data() {
     return {
+      today: new Date(),
       content: "text"
     };
   },
