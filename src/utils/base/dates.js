@@ -4,13 +4,13 @@
  * @see components:ListDate
  */
 
-import Constants from './constants';
+import Constants from '../constants/dates';
 
 export default {
 
   getDateInOrder(order) {
     let date = new Date();
-    return new Date((date.setDate(date.getDate() - 10 + order)));
+    return new Date((date.setDate(date.getDate() - (Constants.count/2) + order)));
   },
 
   /**
