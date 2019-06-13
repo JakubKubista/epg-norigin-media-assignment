@@ -9,7 +9,7 @@ import Files from '@/utils/config/files';
 Files.loadFile('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons', 'css');
 
 addDecorator(() => ({
-  template: '<v-app><story/></v-app>',
+  template: '<v-app><story style="margin: auto"/></v-app>',
 }));
 
 const req = require.context('@/stories', true, /.stories.js$/)
