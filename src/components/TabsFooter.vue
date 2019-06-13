@@ -1,7 +1,6 @@
 <template>
   <div class="footer">
     <v-tabs v-model="tabs"
-            fixed-tabs
             hide-slider
             grow
             dark
