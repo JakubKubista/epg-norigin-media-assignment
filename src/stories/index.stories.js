@@ -28,20 +28,22 @@ storiesOf("Button", module)
 
 storiesOf("Components", module)
   .add(
-  "Toolbar",
-  () => ({
-    components: { Toolbar },
-    template: "<Toolbar />",
-  }),
-  {
-    notes: "Modified Toolbar for home and detail page."
-  })
+    "Toolbar",
+    () => ({
+      components: { Toolbar },
+      template: "<Toolbar />"
+    }),
+    {
+      notes: "Modified Toolbar for home and detail page."
+    }
+  )
   .add(
-  "TabsDate",
-  () => ({
-    components: { TabsDate },
-    template: "<TabsDate />",
-  }),
-  {
-    notes: "Tabs for date selection. Today is default."
-  });
+    "TabsDate",
+    () => ({
+      components: { TabsDate },
+      template: "<TabsDate />"
+    }),
+    {
+      notes: "Tabs for date selection. Today is default."
+    }
+  );
