@@ -3,7 +3,8 @@ import { storiesOf } from "@storybook/vue";
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
-import MyButton from "../components/MyButton.vue";
+import MyButton from "@/components/MyButton.vue";
+import MyButtonVuetify from "@/components/MyButtonVuetify.vue";
 
 storiesOf("Button", module)
   .add("with text", () => ({
@@ -23,3 +24,13 @@ storiesOf("Button", module)
     template: '<my-button @click="action">😀 😎 👍 💯</my-button>',
     methods: { action: action("clicked") }
   }));
+
+  storiesOf("ButtonVuetify", module)
+  .add("With Markdown", () => ({
+    components: { MyButtonVuetify },
+    template: '<my-button-vuetify @click="action"/>',
+    methods: { action: action("clicked") },
+  }),
+  {
+    notes: 'Title, description',
+  });
