@@ -4,7 +4,6 @@
 
     <v-tab v-for="i in 30" :key="i" :href="'#tab-' + i">
       {{ i }}
-      <br>
       {{ dates.getDate() }}
     </v-tab>
 

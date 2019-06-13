@@ -4,6 +4,8 @@
  * @see components:ListDate
  */
 
+import Constants from './constants';
+
 export default {
   /**
    * Format date into string with date and month
@@ -20,8 +22,13 @@ export default {
     return dd + '.' + mm + '.';
   },
 
+  getDayOfWeek(date) {
+    return Constants.days[date.getDay()].substr(0, 3);
+  },
+
   getDate() {
     let date = new Date();
-    return this.formatDate(date);
+    let dateFormated = this.formatDate(date) + "\n" + this.getDayOfWeek(date);
+    return dateFormated;
   }
 };
