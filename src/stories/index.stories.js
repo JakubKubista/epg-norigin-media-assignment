@@ -25,12 +25,12 @@ storiesOf("Button", module)
     methods: { action: action("clicked") }
   }));
 
-  storiesOf("ButtonVuetify", module)
+storiesOf("ButtonVuetify", module)
   .add("With Markdown", () => ({
     components: { MyButtonVuetify },
     template: '<my-button-vuetify @click="action"/>',
     methods: { action: action("clicked") },
   }),
-  {
-    notes: 'Title, description',
-  });
+    {
+      notes: 'Title, description',
+    });
