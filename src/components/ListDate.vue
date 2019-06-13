@@ -1,9 +1,9 @@
 <template>
-  <v-tabs dark
-          color="$color-secondary"
-          v-model="active"
-          show-arrows>
-    <v-tabs-slider color="$color-secondary"></v-tabs-slider>
+  <v-tabs v-model="active"
+          show-arrows
+          dark
+          color="#252525">
+    <v-tabs-slider color=null></v-tabs-slider>
 
     <v-tab v-for="i in constants.count"
            :key="i"
@@ -19,7 +19,9 @@
                   :key="i"
                   :value="'tab-' + i">
         <v-card flat>
-          <v-card-text><!-- Content Component --></v-card-text>
+          <v-card-text>
+            <!-- Content Component -->
+          </v-card-text>
         </v-card>
       </v-tab-item>
     </v-tabs-items>
@@ -42,9 +44,9 @@ export default {
     constants: () => Constants
   },
   methods: {
-      defaultTab() {
-        this.active = "tab-" + Constants.count/2;
-    },
+    defaultTab() {
+      this.active = "tab-" + Constants.count / 2;
+    }
   },
   mounted() {
     this.defaultTab();
