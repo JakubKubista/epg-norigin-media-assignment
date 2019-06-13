@@ -25,12 +25,14 @@ storiesOf("Button", module)
     methods: { action: action("clicked") }
   }));
 
-storiesOf("Lists", module)
-  .add("ListDate", () => ({
+storiesOf("Lists", module).add(
+  "ListDate",
+  () => ({
     components: { ListDate },
-    template: '<ListDate />',
-    methods: { action: action("clicked") },
+    template: "<ListDate />",
+    methods: { action: action("clicked") }
   }),
-    {
-      notes: 'Title, description',
-    });
+  {
+    notes: "Title, description"
+  }
+);
