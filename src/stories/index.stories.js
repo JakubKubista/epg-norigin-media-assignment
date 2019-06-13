@@ -4,6 +4,7 @@ import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
 import MyButton from "@/components/MyButton.vue";
+import Toolbar from "@/components/Toolbar.vue";
 import ListDate from "@/components/ListDate.vue";
 
 storiesOf("Button", module)
@@ -25,14 +26,22 @@ storiesOf("Button", module)
     methods: { action: action("clicked") }
   }));
 
-storiesOf("Lists", module).add(
+storiesOf("Components", module)
+  .add(
+  "Toolbar",
+  () => ({
+    components: { Toolbar },
+    template: "<Toolbar />",
+  }),
+  {
+    notes: "Modified Toolbar for home and detail page."
+  })
+  .add(
   "ListDate",
   () => ({
     components: { ListDate },
     template: "<ListDate />",
-    methods: { action: action("clicked") }
   }),
   {
-    notes: "Title, description"
-  }
-);
+    notes: "Tabs for date selection. Today is default."
+  });

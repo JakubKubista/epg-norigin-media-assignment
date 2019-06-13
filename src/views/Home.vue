@@ -1,14 +1,19 @@
 <template>
-  <HelloWorld/>
+  <div>
+    <Toolbar />
+    <ListDate />
+  </div>
 </template>
 
 <script>
-import HelloWorld from "@/components/HelloWorld";
+import Toolbar from "@/components/Toolbar";
+import ListDate from "@/components/ListDate";
 
 export default {
   name: "home",
   components: {
-    HelloWorld
+    Toolbar,
+    ListDate
   }
 };
 </script>
