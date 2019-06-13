@@ -1,10 +1,21 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { configure } from '@storybook/vue'
+import { configure, addDecorator } from '@storybook/vue';
 
-const req = require.context('../../src/stories', true, /.stories.js$/)
+import "@/plugins/vuetify";
+import 'vuetify/dist/vuetify.css';
+// import '@/components/_globals.js';
+
+import Files from '@/utils/config/files';
+Files.loadFile('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons', 'css');
+
+addDecorator(() => ({
+  template: '<v-app><story/></v-app>',
+}));
+
+const req = require.context('@/stories', true, /.stories.js$/)
 
 function loadStories() {
   req.keys().forEach(filename => req(filename))
 }
+configure(loadStories, module);
 
-configure(loadStories, module)
