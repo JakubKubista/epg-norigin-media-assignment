@@ -28,7 +28,7 @@ storiesOf("Button", module)
 storiesOf("Lists", module)
   .add("ListDate", () => ({
     components: { ListDate },
-    template: '<ListDate/>',
+    template: '<ListDate />',
     methods: { action: action("clicked") },
   }),
     {

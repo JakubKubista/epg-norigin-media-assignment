@@ -1,8 +1,12 @@
 <template>
-  <v-tabs dark color="cyan" show-arrows>
-    <v-tabs-slider color="yellow"></v-tabs-slider>
+  <v-tabs dark color="$color-secondary" show-arrows>
+    <v-tabs-slider color="$color-secondary"></v-tabs-slider>
 
-    <v-tab v-for="i in 30" :key="i" :href="'#tab-' + i">{{ dates.getDate() }} {{ i }}</v-tab>
+    <v-tab v-for="i in 30" :key="i" :href="'#tab-' + i">
+      {{ i }}
+      <br>
+      {{ dates.getDate() }}
+    </v-tab>
 
     <v-tabs-items>
       <v-tab-item v-for="i in 30" :key="i" :value="'tab-' + i">
