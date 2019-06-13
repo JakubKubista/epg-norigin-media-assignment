@@ -33,7 +33,7 @@ import Base from "@/utils/base/dates";
 import Constants from "@/utils/constants/dates";
 
 export default {
-  name: "my-button-vuetify",
+  name: "tabs-date",
   data() {
     return {
       active: null

@@ -31,7 +31,11 @@ storiesOf("Components", module)
     "Toolbar",
     () => ({
       components: { Toolbar },
-      template: "<Toolbar />"
+      computed: {
+        iconLeft: () => 'person',
+        background: () => '#000000'
+      },
+      template: '<Toolbar :iconLeft="iconLeft" :background="background" />'
     }),
     {
       notes: "Modified Toolbar for home and detail page."
@@ -41,7 +45,7 @@ storiesOf("Components", module)
     "TabsDate",
     () => ({
       components: { TabsDate },
-      template: "<TabsDate />"
+      template: '<TabsDate />'
     }),
     {
       notes: "Tabs for date selection. Today is default."

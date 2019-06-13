@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Toolbar />
+    <Toolbar :iconLeft="iconLeft"
+             :background="background" />
     <TabsDate />
   </div>
 </template>
@@ -14,6 +15,12 @@ export default {
   components: {
     Toolbar,
     TabsDate
+  },
+  data() {
+    return {
+      iconLeft: "person",
+      background: "#000000"
+    };
   }
 };
 </script>

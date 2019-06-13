@@ -1,14 +1,14 @@
 <template>
-  <v-toolbar color="#000000"
+  <v-toolbar :color="background"
              dark>
     <v-btn icon>
-      <v-icon>person</v-icon>
+      <v-icon> {{ iconLeft }} </v-icon>
     </v-btn>
 
     <v-spacer></v-spacer>
 
     <v-btn icon>
-      <v-img :src="require('../assets/images/logo.png')"></v-img>
+      <v-img :src="imgPath"></v-img>
     </v-btn>
 
     <v-spacer></v-spacer>
@@ -18,3 +18,21 @@
     </v-btn>
   </v-toolbar>
 </template>
+
+<script>
+export default {
+  name: "toolbar",
+  props: {
+    iconLeft: String,
+    background: String
+  },
+  data() {
+    return {
+      //
+    };
+  },
+  computed: {
+    imgPath: () => require("@/assets/images/logo.png")
+  }
+};
+</script>
