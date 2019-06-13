@@ -4,7 +4,7 @@ import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
 import MyButton from "@/components/MyButton.vue";
-import MyButtonVuetify from "@/components/MyButtonVuetify.vue";
+import DateList from "@/components/DateList.vue";
 
 storiesOf("Button", module)
   .add("with text", () => ({
@@ -25,10 +25,10 @@ storiesOf("Button", module)
     methods: { action: action("clicked") }
   }));
 
-storiesOf("ButtonVuetify", module)
+storiesOf("DateList", module)
   .add("With Markdown", () => ({
-    components: { MyButtonVuetify },
-    template: '<my-button-vuetify @click="action"/>',
+    components: { DateList },
+    template: '<DateList/>',
     methods: { action: action("clicked") },
   }),
     {
