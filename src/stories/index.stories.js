@@ -6,7 +6,7 @@ import { linkTo } from "@storybook/addon-links";
 import MyButton from "@/components/MyButton.vue";
 import Toolbar from "@/components/Toolbar.vue";
 import TabsDate from "@/components/TabsDate.vue";
-import TabsFooter from "@/components/TabsFooter.vue";
+import BottomNavigation from "@/components/BottomNavigation.vue";
 
 storiesOf("Button", module)
   .add("with text", () => ({
@@ -53,12 +53,12 @@ storiesOf("Components", module)
     }
   )
     .add(
-      "TabsFooter",
+      "BottomNavigation",
       () => ({
-        components: { TabsFooter },
-        template: '<TabsFooter />'
+        components: { BottomNavigation },
+        template: '<BottomNavigation />'
       }),
       {
-        notes: "Tabs as main app navigation."
+        notes: "The main navigation of application."
       }
   );
