@@ -2,8 +2,8 @@
   <v-tabs v-model="active"
           show-arrows
           dark
+          hide-slider
           color="#252525">
-    <v-tabs-slider color=null></v-tabs-slider>
 
     <v-tab v-for="i in constants.count"
            :key="i"

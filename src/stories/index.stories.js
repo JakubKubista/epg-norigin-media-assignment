@@ -6,6 +6,7 @@ import { linkTo } from "@storybook/addon-links";
 import MyButton from "@/components/MyButton.vue";
 import Toolbar from "@/components/Toolbar.vue";
 import TabsDate from "@/components/TabsDate.vue";
+import TabsFooter from "@/components/TabsFooter.vue";
 
 storiesOf("Button", module)
   .add("with text", () => ({
@@ -50,4 +51,14 @@ storiesOf("Components", module)
     {
       notes: "Tabs for date selection. Today is default."
     }
+  )
+    .add(
+      "TabsFooter",
+      () => ({
+        components: { TabsFooter },
+        template: '<TabsFooter />'
+      }),
+      {
+        notes: "Tabs as main app navigation."
+      }
   );

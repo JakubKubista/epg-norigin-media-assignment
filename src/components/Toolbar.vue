@@ -23,8 +23,8 @@
 export default {
   name: "toolbar",
   props: {
-    iconLeft: String,
-    background: String
+    iconLeft: String, // person or back
+    background: String // transparent or #000000
   },
   data() {
     return {
