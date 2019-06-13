@@ -2,7 +2,7 @@
   <v-tabs dark color="cyan" show-arrows>
     <v-tabs-slider color="yellow"></v-tabs-slider>
 
-    <v-tab v-for="i in 30" :key="i" :href="'#tab-' + i">Item {{ i }}</v-tab>
+    <v-tab v-for="i in 30" :key="i" :href="'#tab-' + i">{{ dates.getDate() }} {{ i }}</v-tab>
 
     <v-tabs-items>
       <v-tab-item v-for="i in 30" :key="i" :value="'tab-' + i">
@@ -15,12 +15,17 @@
 </template>
 
 <script>
+import Dates from "@/utils/base/dates";
+
 export default {
   name: "my-button-vuetify",
   data() {
     return {
       content: "text"
     };
+  },
+  computed: {
+    dates: () => Dates
   }
 };
 </script>
