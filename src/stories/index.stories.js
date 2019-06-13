@@ -5,7 +5,7 @@ import { linkTo } from "@storybook/addon-links";
 
 import MyButton from "@/components/MyButton.vue";
 import Toolbar from "@/components/Toolbar.vue";
-import ListDate from "@/components/ListDate.vue";
+import TabsDate from "@/components/TabsDate.vue";
 
 storiesOf("Button", module)
   .add("with text", () => ({
@@ -37,10 +37,10 @@ storiesOf("Components", module)
     notes: "Modified Toolbar for home and detail page."
   })
   .add(
-  "ListDate",
+  "TabsDate",
   () => ({
-    components: { ListDate },
-    template: "<ListDate />",
+    components: { TabsDate },
+    template: "<TabsDate />",
   }),
   {
     notes: "Tabs for date selection. Today is default."
