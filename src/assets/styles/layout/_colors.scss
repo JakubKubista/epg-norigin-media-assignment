@@ -1,1 +1,10 @@
+$color-background: #000000;
 $color-secondary: #252525;
+
+.md-background {
+  background-color: $color-background;
+}
+
+.md-secondary {
+  background-color: $color-secondary;
+}
