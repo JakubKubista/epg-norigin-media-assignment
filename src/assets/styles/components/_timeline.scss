@@ -1,0 +1,24 @@
+.md-timeline {
+  list-style: none;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overflow: -moz-scrollbars-none;
+}
+
+.md-timeline::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.md-timeline-element {
+  display: inline-block;
+  width: 240px;
+  height: 30px;
+  border: solid 1px $color-border;
+  text-align: center;
+  padding-top: 4px;
+  color: $color-font;
+  background-color: $color-secondary;
+  cursor: move;
+}
