@@ -7,6 +7,7 @@ import Toolbar from "@/components/Toolbar.vue";
 import TabsDate from "@/components/TabsDate.vue";
 import BottomNavigation from "@/components/BottomNavigation.vue";
 import ButtonToggle from "@/components/ButtonToggle.vue";
+import CardSchedule from "@/components/CardSchedule.vue";
 
 import "@/assets/styles/main.scss";
 
@@ -54,4 +55,15 @@ storiesOf("Components", module)
       },
       template: '<ButtonToggle @click="action" :icon="icon" />>',
       methods: { action: action("clicked") }
+    }))
+  .add(
+    "CardSchedule",
+    () => ({
+      components: { CardSchedule },
+      computed: {
+        title: () => 'Vikings',
+        subtitle: () => '14:20 - 15:20',
+      },
+      template: '<CardSchedule @click="action" :title="title" :subtitle="subtitle" />>',
+      methods: { action: linkTo("Components", "ButtonToggle") }
     }));
