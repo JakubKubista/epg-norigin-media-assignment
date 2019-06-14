@@ -2,14 +2,14 @@
   <v-bottom-nav :active.sync="activeNavigation"
                 :value="true"
                 absolute
-                color="#252525"
                 dark
+                class="md-background-secondary"
                 shift
                 @update:active="$emit('navigationChanged', $event)">
 
     <v-btn v-for="icon in icons"
            :key="icon"
-           color="#E8A61D"
+           class="md-color-button-on"
            flat
            :value="icon">
 

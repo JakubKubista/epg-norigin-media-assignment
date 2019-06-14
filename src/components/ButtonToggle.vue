@@ -2,7 +2,7 @@
   <v-btn dark
          fab
          @click="onClick"
-         class="square">
+         class="md-button-square">
     <v-icon class="md-color-button-off"> {{ icon }} </v-icon>
   </v-btn>
 </template>

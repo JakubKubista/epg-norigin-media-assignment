@@ -8,7 +8,7 @@
     <v-tab v-for="i in constants.count"
            :key="i"
            :href="'#tab-' + i"
-           style="text-transform: capitalize">
+           class="md-tabs-date">
       {{ base.getDayOfWeekInOrder(i) }}
       <br />
       {{ base.getDayAndMonthInOrder(i) }}

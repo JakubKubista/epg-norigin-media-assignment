@@ -6,7 +6,7 @@
     <v-content>
       <Home v-if="activeNavigation=='list'" />
       <h2 v-else
-          class="message-centred"> {{ defaultText }} </h2>
+          class="md-message-centred"> {{ defaultText }} </h2>
     </v-content>
 
     <BottomNavigation @navigationChanged="activeNavigation=$event" />
