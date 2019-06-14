@@ -26,10 +26,14 @@ export default {
     },
     toggleActive() {
       this.$el.classList.toggle("md-card-schedule-active");
+    },
+    setWidth() {
+      this.$el.style.width = this.length * 4 + "px"; // range: 20 - 240
     }
   },
   mounted() {
     if (this.active) this.toggleActive();
+    this.setWidth();
   }
 };
 </script>
@@ -37,5 +41,6 @@ export default {
 <style lang="scss">
 .subtitle {
   opacity: 0.6;
+  font-size: 10px;
 }
 </style>
