@@ -8,6 +8,7 @@ import TabsDate from "@/components/TabsDate.vue";
 import BottomNavigation from "@/components/BottomNavigation.vue";
 import ButtonToggle from "@/components/ButtonToggle.vue";
 import CardSchedule from "@/components/CardSchedule.vue";
+import Timeline from "@/components/Timeline.vue";
 
 import "@/assets/styles/main.scss";
 
@@ -55,7 +56,10 @@ storiesOf("Components", module)
       },
       template: '<ButtonToggle @click="action" :icon="icon" />',
       methods: { action: action("clicked") }
-    }))
+    }),
+    {
+      notes: "Square toggle button for change EPG content."
+    })
   .add(
     "CardSchedule",
     () => ({
@@ -68,4 +72,17 @@ storiesOf("Components", module)
       },
       template: '<CardSchedule @click="action" :title="title" :subtitle="subtitle" :active="active" :length="length" />',
       methods: { action: linkTo("Components", "ButtonToggle") }
-    }));
+    }),
+    {
+      notes: "Single element for each show."
+    })
+  .add(
+    "Timeline",
+    () => ({
+      components: { Timeline },
+      template: '<Timeline />'
+    }),
+    {
+      notes: "Static timeline for program walkthrow."
+    }
+  );
