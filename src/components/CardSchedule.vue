@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "button-square",
+  name: "card-schedule",
   props: {
     title: String,
     subtitle: String,
@@ -25,9 +25,7 @@ export default {
       this.$emit("click");
     },
     toggleActive() {
-      document
-        .querySelector(".md-card-schedule")
-        .classList.toggle("md-card-schedule-active");
+      this.$el.classList.toggle("md-card-schedule-active");
     }
   },
   mounted() {
@@ -35,6 +33,7 @@ export default {
   }
 };
 </script>
+
 <style lang="scss">
 .subtitle {
   opacity: 0.6;

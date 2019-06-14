@@ -53,7 +53,7 @@ storiesOf("Components", module)
       computed: {
         icon: () => 'star',
       },
-      template: '<ButtonToggle @click="action" :icon="icon" />>',
+      template: '<ButtonToggle @click="action" :icon="icon" />',
       methods: { action: action("clicked") }
     }))
   .add(
