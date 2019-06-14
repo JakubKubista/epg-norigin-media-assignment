@@ -18,10 +18,8 @@
       <v-tab-item v-for="i in constants.count"
                   :key="i"
                   :value="'tab-' + i">
-        <v-card flat>
-          <v-card-text>
-            <!-- Content Component -->
-          </v-card-text>
+        <v-card>
+          <Timeline />
         </v-card>
       </v-tab-item>
     </v-tabs-items>
@@ -32,8 +30,13 @@
 import Base from "@/utils/base/dates";
 import Constants from "@/utils/constants/dates";
 
+import Timeline from "@/components/Timeline";
+
 export default {
   name: "tabs-date",
+  components: {
+    Timeline
+  },
   data() {
     return {
       active: null
