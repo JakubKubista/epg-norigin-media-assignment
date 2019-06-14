@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: "tabs-footer",
+  name: "bottom-navigation",
   data() {
     return {
       activeNavigation: "list",
