@@ -4,8 +4,8 @@
 * Another source: https://scotch.io/tutorials/aesthetic-sass-1-architecture-and-style-organization
 */
 #app {
-  @import 'layout/base';
   @import 'layout/colors';
+  @import 'layout/base';
   @import 'layout/sizes';
 
   @import 'components/buttons';
