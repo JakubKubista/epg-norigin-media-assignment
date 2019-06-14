@@ -3,10 +3,12 @@ import { storiesOf } from "@storybook/vue";
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
-import ButtonSquare from "@/components/ButtonSquare.vue";
 import Toolbar from "@/components/Toolbar.vue";
 import TabsDate from "@/components/TabsDate.vue";
 import BottomNavigation from "@/components/BottomNavigation.vue";
+import ButtonToggle from "@/components/ButtonToggle.vue";
+
+import "@/assets/styles/main.scss";
 
 storiesOf("Components", module)
   .add(
@@ -44,9 +46,12 @@ storiesOf("Components", module)
     }
   )
   .add(
-    "ButtonSquare",
+    "ButtonToggle",
     () => ({
-      components: { ButtonSquare },
-      template: '<ButtonSquare @click="action">Hello Button</ButtonSquare>',
+      components: { ButtonToggle },
+      computed: {
+        icon: () => 'star',
+      },
+      template: '<ButtonToggle @click="action" :icon="icon" />>',
       methods: { action: action("clicked") }
     }));

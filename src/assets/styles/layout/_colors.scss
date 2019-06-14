@@ -1,10 +1,20 @@
 $color-background: #000000;
 $color-secondary: #252525;
+$color-button-off: #555555;
+$color-button-on: #E8A61D;
 
-.md-background {
-  background-color: $color-background;
+.md-color-background {
+  color: $color-background;
 }
 
-.md-secondary {
-  background-color: $color-secondary;
+.md-color-secondary {
+  color: $color-background;
+}
+
+.md-color-button-off {
+  color: $color-button-off;
+}
+
+.md-color-button-on {
+  color: $color-button-on;
 }
