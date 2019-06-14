@@ -1,11 +1,11 @@
-import { mount  } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 import Toolbar from "@/components/Toolbar.vue";
 
 describe("Toolbar.vue", () => {
   const iconLeft = 'person';
   const background = "#000000";
 
-  const wrapper = mount (Toolbar, {
+  const wrapper = mount(Toolbar, {
     propsData: { iconLeft, background }
   });
 
