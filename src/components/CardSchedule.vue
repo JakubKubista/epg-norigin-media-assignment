@@ -27,7 +27,7 @@ export default {
     toggleActive() {
       document
         .querySelector(".md-card-schedule")
-        .classList.toggle("md-card-schedule-on");
+        .classList.toggle("md-card-schedule-active");
     }
   },
   mounted() {
@@ -35,8 +35,7 @@ export default {
   }
 };
 </script>
-
-<style>
+<style lang="scss">
 .subtitle {
   opacity: 0.6;
 }

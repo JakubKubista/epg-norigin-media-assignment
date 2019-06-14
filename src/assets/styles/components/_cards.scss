@@ -1,11 +1,11 @@
 .md-card-schedule {
-  background-color: #181818;
-  color: #ffffff;
+  background-color: $color-element;
+  color: $color-font;
   padding: 8px;
   height: $height-element;
   font-size: 12px;
 }
 
-.md-card-schedule-on {
-  background-color: #999999;
+.md-card-schedule-active {
+  background-color: $color-element-active;
 }

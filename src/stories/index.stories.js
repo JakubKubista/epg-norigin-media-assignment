@@ -63,9 +63,9 @@ storiesOf("Components", module)
       computed: {
         title: () => 'Vikings',
         subtitle: () => '14:20 - 15:20',
-        active: () => false,
+        active: () => true,
         length: () => 60,
       },
-      template: '<CardSchedule @click="action" :title="title" :subtitle="subtitle" :active="active" :length="length" />>',
+      template: '<CardSchedule @click="action" :title="title" :subtitle="subtitle" :active="active" :length="length" />',
       methods: { action: linkTo("Components", "ButtonToggle") }
     }));
