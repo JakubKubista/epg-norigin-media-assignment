@@ -6,7 +6,8 @@
 #app {
   @import 'layout/base';
   @import 'layout/colors';
+  @import 'layout/sizes';
 
-  @import 'components/footer';
   @import 'components/buttons';
+  @import 'components/tabs';
 }
