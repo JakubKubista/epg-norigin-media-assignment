@@ -15,7 +15,8 @@
       {{ base.getDayAndMonthInOrder(i) }}
     </v-tab>
 
-    <v-tabs-items v-dragscroll class="md-tab-date-content">
+    <v-tabs-items v-dragscroll
+                  class="md-tab-date-content">
       <v-tab-item v-for="i in constants.count"
                   :key="i"
                   :value="'tab-' + i">
@@ -30,6 +31,8 @@
 <script>
 import Base from "@/utils/base/dates";
 import Constants from "@/utils/constants/dates";
+import Api from "@/utils/config/api";
+import Axios from "axios";
 
 import Timeline from "@/components/Timeline";
 import { dragscroll } from "vue-dragscroll";
@@ -41,7 +44,8 @@ export default {
   },
   data() {
     return {
-      active: null
+      active: null,
+      channels: null
     };
   },
   computed: {
@@ -51,13 +55,19 @@ export default {
   methods: {
     defaultTab() {
       this.active = "tab-" + Constants.count / 2;
+    },
+    getChannels() {
+      Api.callService({ method: "get", service: "epg" }).then(response => {
+        this.channels = response.data.channels;
+      });
     }
   },
   directives: {
-    'dragscroll': dragscroll
+    dragscroll: dragscroll
   },
   mounted() {
     this.defaultTab();
+    this.getChannels();
   }
 };
 </script>
