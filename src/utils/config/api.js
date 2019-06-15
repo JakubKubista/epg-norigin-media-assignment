@@ -1,6 +1,6 @@
 /**
  * This lib is to be used to call services of server.
- * To change default url, change method getUrl in object ISAC_URL.
+ * To change default url, change constant in setUrl.
  * @module utils/isac/api
  * @see store:base/isac-service
  */
@@ -16,17 +16,38 @@ export default {
    * @return {string} url with service.
    */
   setUrl(input) {
-    return Constants.url.local + '/' + input.serviceName;
+    return Constants.url.local + input.service;
   },
 
   /**
-   * Method call ISAC service.
+   * Define any method which is needed, like:
+   * fetch, delete, head, options, post, put, patch
    * @function
-   * @param {object} input - ISAC service parameters.
+   * @param {object} input - Server service parameters.
+   * @return {string} Axios request by service url
+   */
+  useMethod(input) {
+    return {
+      'get': Axios.get(this.setUrl(input), {
+        params: input.parameters
+      })
+    };
+  },
+
+  /**
+   * Method call get service.
+   * @function
+   * @param {object} input - Server service parameters.
    * @return {any} Axios request by service url.
    */
-  get(input) {
-    const url = this.setUrl(input);
-    return Axios.get(url, { params: input.parameters });
+  async callService(input) {
+    try {
+      return await this.useMethod(input)[input.method];
+    } catch (error) {
+      // error handler
+      return null;
+    } finally {
+      // hide loading component
+    }
   },
 };
