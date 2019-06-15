@@ -3,12 +3,13 @@
           show-arrows
           dark
           hide-slider
+          class="md-content-program"
           color="#252525">
 
     <v-tab v-for="i in constants.count"
            :key="i"
            :href="'#tab-' + i"
-           class="md-tabs-date">
+           class="md-tab-date">
       {{ base.getDayOfWeekInOrder(i) }}
       <br />
       {{ base.getDayAndMonthInOrder(i) }}
@@ -18,7 +19,7 @@
       <v-tab-item v-for="i in constants.count"
                   :key="i"
                   :value="'tab-' + i">
-        <div v-dragscroll class="tab-content">
+        <div v-dragscroll class="md-tab-date-content">
           <Timeline />
         </div>
       </v-tab-item>
