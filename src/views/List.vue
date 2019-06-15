@@ -1,24 +1,24 @@
 <template>
   <div class="md-content-program">
-    <ButtonToggle @click="favourite = $event"
-                  :icon="toggleIcon" />
+    <SquareButton @click="favourite = $event"
+                  :icon="icon" />
     <Tabs />
   </div>
 </template>
 
 <script>
-import ButtonToggle from "@/components/base/ButtonToggle";
+import SquareButton from "@/components/base/SquareButton";
 import Tabs from "@/components/modules/list/Tabs";
 
 export default {
   name: "list",
   components: {
-    ButtonToggle,
+    SquareButton,
     Tabs
   },
   data() {
     return {
-      toggleIcon: "star",
+      icon: "star",
       favourite: false
     };
   }
