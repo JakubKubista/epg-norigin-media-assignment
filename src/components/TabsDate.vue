@@ -18,9 +18,9 @@
       <v-tab-item v-for="i in constants.count"
                   :key="i"
                   :value="'tab-' + i">
-        <v-card>
+        <div v-dragscroll class="tab-content">
           <Timeline />
-        </v-card>
+        </div>
       </v-tab-item>
     </v-tabs-items>
   </v-tabs>
@@ -31,6 +31,7 @@ import Base from "@/utils/base/dates";
 import Constants from "@/utils/constants/dates";
 
 import Timeline from "@/components/Timeline";
+import { dragscroll } from 'vue-dragscroll';
 
 export default {
   name: "tabs-date",
@@ -50,6 +51,9 @@ export default {
     defaultTab() {
       this.active = "tab-" + Constants.count / 2;
     }
+  },
+  directives: {
+    'dragscroll': dragscroll
   },
   mounted() {
     this.defaultTab();

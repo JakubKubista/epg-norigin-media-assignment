@@ -1,4 +1,9 @@
-.md-tabs-date{
+.md-tabs-date {
   text-transform: capitalize;
   background-color: $color-secondary;
+}
+
+.tab-content {
+  cursor: -webkit-grab;
+  cursor: grab;
 }
