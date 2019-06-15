@@ -4,7 +4,7 @@
              :background="toolbarBackground" />
 
     <v-content>
-      <Home v-if="activeNavigation=='list'" />
+      <List v-if="activeNavigation=='list'" />
       <h2 v-else
           class="md-message-centred"> {{ defaultText }} </h2>
     </v-content>
@@ -17,14 +17,14 @@
 import Toolbar from "@/components/layout/Toolbar";
 import BottomNavigation from "@/components/layout/BottomNavigation";
 
-import Home from "@/views/Home";
+import List from "@/views/List";
 
 export default {
   name: "App",
   components: {
     Toolbar,
     BottomNavigation,
-    Home
+    List
   },
   data() {
     return {

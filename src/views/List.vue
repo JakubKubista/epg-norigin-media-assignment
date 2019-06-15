@@ -2,19 +2,19 @@
   <div>
     <ButtonToggle @click="favourite = $event"
                   :icon="toggleIcon" />
-    <TabsDate />
+    <Tabs />
   </div>
 </template>
 
 <script>
 import ButtonToggle from "@/components/base/ButtonToggle";
-import TabsDate from "@/components/TabsDate";
+import Tabs from "@/components/modules/list/Tabs";
 
 export default {
-  name: "home",
+  name: "list",
   components: {
     ButtonToggle,
-    TabsDate
+    Tabs
   },
   data() {
     return {
