@@ -5,8 +5,8 @@
 */
 #app {
   @import 'layout/colors';
-  @import 'layout/base';
   @import 'layout/sizes';
+  @import 'layout/base';
 
   @import 'components/buttons';
   @import 'components/cards';
