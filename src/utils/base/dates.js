@@ -16,7 +16,7 @@ export default {
    */
   getDateInOrder(order) {
     let date = new Date();
-    return new Date((date.setDate(date.getDate() - (Constants.count/2) + order)));
+    return new Date((date.setDate(date.getDate() - (Constants.count / 2) + order)));
   },
 
   /**
@@ -60,5 +60,4 @@ export default {
       this.getDateInOrder(order)
     );
   }
-
 };
