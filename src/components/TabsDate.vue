@@ -34,7 +34,7 @@ import Constants from "@/utils/constants/dates";
 import Api from "@/utils/config/api";
 import Axios from "axios";
 
-import Timeline from "@/components/Timeline";
+import Timeline from "@/components/base/Timeline";
 import { dragscroll } from "vue-dragscroll";
 
 export default {

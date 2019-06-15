@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import Toolbar from "@/components/Toolbar";
-import BottomNavigation from "@/components/BottomNavigation";
+import Toolbar from "@/components/layout/Toolbar";
+import BottomNavigation from "@/components/layout/BottomNavigation";
 
 import Home from "@/views/Home";
 

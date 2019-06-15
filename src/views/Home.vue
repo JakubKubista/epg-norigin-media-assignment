@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import ButtonToggle from "@/components/ButtonToggle";
+import ButtonToggle from "@/components/base/ButtonToggle";
 import TabsDate from "@/components/TabsDate";
 
 export default {
