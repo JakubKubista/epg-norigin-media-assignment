@@ -8,6 +8,12 @@ import Constants from '../constants/dates';
 
 export default {
 
+  /**
+   * Get date from the list of dates in order.
+   * @function
+   * @param {number} order
+   * @return {date} date
+   */
   getDateInOrder(order) {
     let date = new Date();
     return new Date((date.setDate(date.getDate() - (Constants.count/2) + order)));
@@ -15,7 +21,6 @@ export default {
 
   /**
    * Format date into string with date and month
-   *
    * @function
    * @param {date} date
    * @return {string} day and month
@@ -27,16 +32,29 @@ export default {
     return dd + '.' + mm + '.';
   },
 
+  /**
+   * Get first 3 letters of day from input date.
+   * @function
+   * @param {date} date
+   * @return {string} day
+   */
+  getDayOfWeek(date) {
+    return Constants.days[date.getDay()].substr(0, 3);
+  },
+
+  /**
+   * For both following functions is wanted to
+   * get date by order and then tranform it into
+   * wanted state.
+   * @function
+   * @param {number} order
+   * @return {string} date in chosen representation
+   */
   getDayAndMonthInOrder(order) {
     return this.getDayAndMonth(
       this.getDateInOrder(order)
     );
   },
-
-  getDayOfWeek(date) {
-    return Constants.days[date.getDay()].substr(0, 3);
-  },
-
   getDayOfWeekInOrder(order) {
     return this.getDayOfWeek(
       this.getDateInOrder(order)
