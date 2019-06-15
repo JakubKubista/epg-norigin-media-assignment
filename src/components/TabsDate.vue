@@ -15,11 +15,11 @@
       {{ base.getDayAndMonthInOrder(i) }}
     </v-tab>
 
-    <v-tabs-items>
+    <v-tabs-items v-dragscroll class="md-tab-date-content">
       <v-tab-item v-for="i in constants.count"
                   :key="i"
                   :value="'tab-' + i">
-        <div v-dragscroll class="md-tab-date-content">
+        <div>
           <Timeline />
         </div>
       </v-tab-item>
