@@ -9,3 +9,11 @@
   background-color: $color-secondary;
   box-shadow: 8px 0 5px -4px $color-background;
 }
+
+.md-button-logo {
+  position: relative;
+  top:-18px;
+  padding: 0;
+  margin: 0;
+  border-top: solid 1px $color-border;
+}
