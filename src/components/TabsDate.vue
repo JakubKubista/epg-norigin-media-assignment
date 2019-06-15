@@ -32,7 +32,7 @@ import Base from "@/utils/base/dates";
 import Constants from "@/utils/constants/dates";
 
 import Timeline from "@/components/Timeline";
-import { dragscroll } from 'vue-dragscroll';
+import { dragscroll } from "vue-dragscroll";
 
 export default {
   name: "tabs-date",
