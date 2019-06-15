@@ -19,11 +19,11 @@
       <v-tab-item v-for="i in count"
                   :key="i"
                   :value="'tab-' + i">
-          <Content v-if="i==middle" />
-          <h2 v-else
-              class="md-message-content-centred">
-            {{ notAvailable }}
-          </h2>
+        <Content v-if="i===middle" />
+        <h2 v-else
+            class="md-message-content-centred">
+          {{ notAvailable }}
+        </h2>
       </v-tab-item>
     </v-tabs-items>
   </v-tabs>
@@ -55,7 +55,7 @@ export default {
   methods: {
     defaultTab() {
       this.active = "tab-" + this.middle;
-    },
+    }
   },
   directives: {
     dragscroll: dragscroll

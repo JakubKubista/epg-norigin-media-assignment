@@ -4,7 +4,7 @@
              :background="toolbarBackground" />
 
     <v-content>
-      <List v-if="activeNavigation=='list'" />
+      <List v-if="activeNavigation==='list'" />
       <h2 v-else
           class="md-message-centred">
         {{ notImplemented }}
