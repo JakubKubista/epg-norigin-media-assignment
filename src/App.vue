@@ -6,7 +6,9 @@
     <v-content>
       <List v-if="activeNavigation=='list'" />
       <h2 v-else
-          class="md-message-centred"> {{ defaultText }} </h2>
+          class="md-message-centred">
+        {{ notImplemented }}
+      </h2>
     </v-content>
 
     <BottomNavigation @navigationChanged="activeNavigation=$event" />
@@ -14,9 +16,9 @@
 </template>
 
 <script>
+import Labels from "@/utils/constants/labels";
 import Toolbar from "@/components/layout/Toolbar";
 import BottomNavigation from "@/components/layout/BottomNavigation";
-
 import List from "@/views/List";
 
 export default {
@@ -30,9 +32,11 @@ export default {
     return {
       toolbarIconLeft: "person",
       toolbarBackground: "#000000",
-      activeNavigation: "list",
-      defaultText: "Comming soon"
+      activeNavigation: "list"
     };
+  },
+  computed: {
+    notImplemented: () => Labels.message.fullScreen.notImplemented
   }
 };
 </script>
