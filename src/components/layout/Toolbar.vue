@@ -8,7 +8,7 @@
     <v-spacer></v-spacer>
 
     <v-btn icon>
-      <v-img :src="imgPath"></v-img>
+      <v-img :src="img" />
     </v-btn>
 
     <v-spacer></v-spacer>
@@ -26,13 +26,8 @@ export default {
     iconLeft: String, // person or back
     background: String // transparent or #000000
   },
-  data() {
-    return {
-      //
-    };
-  },
   computed: {
-    imgPath: () => require("@/assets/images/logo.png")
+    img: () => require("@/assets/images/logo.png")
   }
 };
 </script>
