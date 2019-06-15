@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "square-button",
+  name: "button-icon",
   props: {
     icon: String,
   },

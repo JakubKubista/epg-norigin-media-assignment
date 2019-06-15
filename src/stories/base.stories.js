@@ -10,8 +10,8 @@ import {
 } from "@storybook/addon-links";
 
 import CardSchedule from "@/components/base/CardSchedule.vue";
-import SquareButton from "@/components/base/SquareButton.vue";
-import SquareLogo from "@/components/base/SquareLogo.vue";
+import ButtonIcon from "@/components/base/ButtonIcon.vue";
+import ButtonLogo from "@/components/base/ButtonLogo.vue";
 import Timeline from "@/components/base/Timeline.vue";
 
 import "@/assets/styles/main.scss";
@@ -31,21 +31,21 @@ storiesOf("Base", module)
       },
       template: '<CardSchedule @click="action" :title="title" :subtitle="subtitle" :active="active" :length="length" />',
       methods: {
-        action: linkTo("Components", "SquareButton")
+        action: linkTo("Components", "ButtonIcon")
       }
     }), {
       notes: "Single element for each show."
     })
   .add(
-    "SquareButton",
+    "ButtonIcon",
     () => ({
       components: {
-        SquareButton
+        ButtonIcon
       },
       computed: {
         icon: () => "star",
       },
-      template: '<SquareButton @click="action" :icon="icon" />',
+      template: '<ButtonIcon @click="action" :icon="icon" />',
       methods: {
         action: action("clicked")
       }
@@ -53,15 +53,15 @@ storiesOf("Base", module)
       notes: "Square toggle button for change EPG content."
     })
   .add(
-    "SquareLogo",
+    "ButtonLogo",
     () => ({
       components: {
-        SquareLogo
+        ButtonLogo
       },
       computed: {
         logo: () => "https://img.noriginmedia.com/cloudberry/logo_sky1.png",
       },
-      template: '<SquareLogo :logo="logo" />',
+      template: '<ButtonLogo :logo="logo" />',
       methods: {
         action: action("clicked")
       }

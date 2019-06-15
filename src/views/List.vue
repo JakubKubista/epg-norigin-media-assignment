@@ -1,19 +1,19 @@
 <template>
   <div class="md-content-program">
-    <SquareButton @click="favourite = $event"
+    <ButtonIcon @click="favourite = $event"
                   :icon="icon" />
     <Tabs />
   </div>
 </template>
 
 <script>
-import SquareButton from "@/components/base/SquareButton";
+import ButtonIcon from "@/components/base/ButtonIcon";
 import Tabs from "@/components/modules/list/Tabs";
 
 export default {
   name: "list",
   components: {
-    SquareButton,
+    ButtonIcon,
     Tabs
   },
   data() {

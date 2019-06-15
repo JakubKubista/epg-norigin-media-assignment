@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "square-logo",
+  name: "button-logo",
   props: {
     logo: String,
   },
