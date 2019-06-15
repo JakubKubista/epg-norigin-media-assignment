@@ -1,6 +1,6 @@
 /**
  * This lib contains administration with other file types than javascript.
- * @module utils/config/files
+ * @module utils/base/files
  * @see config:storybook/config
  */
 
