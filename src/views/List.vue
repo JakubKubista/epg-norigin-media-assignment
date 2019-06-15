@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="md-content-program">
     <ButtonToggle @click="favourite = $event"
                   :icon="toggleIcon" />
     <Tabs />

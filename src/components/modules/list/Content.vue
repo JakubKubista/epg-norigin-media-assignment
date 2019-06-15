@@ -7,7 +7,6 @@
 <script>
 import Api from "@/utils/config/api";
 import Axios from "axios";
-
 import Timeline from "@/components/base/Timeline";
 
 export default {
