@@ -9,9 +9,9 @@
 
 <script>
 export default {
-  name: "button-toggle",
+  name: "square-button",
   props: {
-    icon: String
+    icon: String,
   },
   data() {
     return {
