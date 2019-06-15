@@ -7,13 +7,17 @@
   z-index: 1;
   border-radius: 0;
   background-color: $color-secondary;
-  box-shadow: 8px 0 5px -4px $color-background;
+  box-shadow: 5px 0 3px -3px $color-background;
+}
+
+.md-button-icon {
+  left: -$height-element - 8px;
 }
 
 .md-button-logo {
   position: relative;
-  top:-18px;
-  padding: 0;
-  margin: 0;
-  border-top: solid 1px $color-border;
+  height: $height-element;
+  float: left;
+  padding-left: 0;
+  margin-left: 0;
 }

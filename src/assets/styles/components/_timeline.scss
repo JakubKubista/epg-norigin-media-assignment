@@ -1,10 +1,6 @@
 .md-timeline {
-  list-style: none;
-  width: 100%;
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  overflow: -moz-scrollbars-none;
+  border-top: solid 1px $color-border;
+  border-bottom: solid 1px $color-border;
 }
 
 .md-timeline::-webkit-scrollbar {
@@ -14,8 +10,8 @@
 .md-timeline-element {
   display: inline-block;
   width: 240px;
-  height: 30px;
-  border: solid 1px $color-border;
+  height: $height-timeline;
+  border-right: solid 1px $color-border;
   text-align: center;
   padding-top: 4px;
   color: $color-font;
