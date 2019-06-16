@@ -1,22 +1,29 @@
 <template>
-  <div class="md-content">
-    <Timeline />
-
-    <div v-for="channel in channels"
-         :key="channel.id">
-      <div class="md-list-schedule">
-        <ButtonLogo :logo="channel.images.logo"
-                    :title="channel.title" />
-        <div v-for="(schedule, index)  in channel.schedules"
-             :key="index"
-             class="md-schedule">
-          <CardSchedule :title="schedule.title"
-                        :start="schedule.start"
-                        :end="schedule.end" />
-        </div>
+  <div>
+    <div class="md-scrollbar">
+      <div class="md-invisibile">
+        <Timeline />
       </div>
     </div>
+    <div class="md-content">
+      <Timeline />
 
+      <div v-for="channel in channels"
+           :key="channel.id">
+        <div class="md-list-schedule">
+          <ButtonLogo :logo="channel.images.logo"
+                      :title="channel.title" />
+          <div v-for="(schedule, index)  in channel.schedules"
+               :key="index"
+               class="md-schedule">
+            <CardSchedule :title="schedule.title"
+                          :start="schedule.start"
+                          :end="schedule.end" />
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -45,10 +52,23 @@ export default {
         this.channels = response.data.channels;
         console.log(this.channels);
       });
+    },
+    handleScroll(event) {
+      this.$el.querySelector(".md-content").scrollLeft = this.$el.querySelector(
+        ".md-scrollbar"
+      ).scrollLeft;
     }
   },
   mounted() {
+    this.$el
+      .querySelector(".md-scrollbar")
+      .addEventListener("scroll", this.handleScroll);
     this.getChannels();
+  },
+  destroyed() {
+    this.$el
+      .querySelector(".md-scrollbar")
+      .removeEventListener("scroll", this.handleScroll);
   }
 };
 </script>

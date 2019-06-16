@@ -1,26 +1,36 @@
-.md-content::-webkit-scrollbar
+.md-scrollbar {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.md-scrollbar::-webkit-scrollbar
 {
   height: 0.7em;
   width: 0.7em;
   background: transparent;
 }
 
-.md-content::-webkit-scrollbar-track
+.md-scrollbar::-webkit-scrollbar-track
 {
   border-radius: 5px;
 }
 
-.md-content::-webkit-scrollbar-thumb
+.md-scrollbar::-webkit-scrollbar-thumb
 {
   width: 10px;
   background-color: $color-primary;
   border-radius: 5px;
 }
 
-.md-content::-webkit-scrollbar-track-piece {
+.md-scrollbar::-webkit-scrollbar-track-piece {
   width: 10px;
 }
 
-.md-content::-webkit-scrollbar-corner {
+.md-scrollbar::-webkit-scrollbar-corner {
   background-color: transparent;
+}
+
+.md-invisibile {
+  visibility: hidden;
+  height: 0;
 }
