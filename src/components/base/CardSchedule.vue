@@ -20,13 +20,9 @@ export default {
     return {
       active: false,
       subtitle: "",
-      length: null
+      length: null,
+      interval: null
     };
-  },
-  watch: {
-    active() {
-      this.toggleActive();
-    }
   },
   computed: {
     dates: () => Dates
@@ -46,24 +42,34 @@ export default {
     },
     setActive() {
       let current = new Date();
-      this.active = current >= this.start && current <= this.end;
-      if (this.active) this.toggleActive();
+      let active =
+        current >= new Date(this.start) && current <= new Date(this.end);
+      if (this.active != active) this.toggleActive();
     },
     toggleActive() {
+      this.active = !this.active;
       this.$el.classList.toggle("md-card-schedule-active");
-    }
+    },
+    loopActive() {
+      clearInterval(this.interval);
+      this.interva = null;
+      this.interval = setInterval(() => {
+        this.setActive();
+      }, 60000);
+    },
   },
   mounted() {
     this.setSubtitle();
     this.setWidth();
     this.setActive();
+    this.loopActive();
   }
 };
 </script>
 
 <style lang="scss">
 .md-title {
-    overflow:hidden;
+  overflow: hidden;
 }
 .md-subtitle {
   opacity: 0.6;
