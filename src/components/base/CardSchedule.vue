@@ -39,20 +39,19 @@ export default {
       this.length = Dates.getMinuteDiffOfDates(this.start, this.end);
       this.$el.style.width = this.length * 4 + "px"; // range: 20 - 240
     },
-    checkActive() {
+    setActive() {
       let current = new Date();
       this.active = (current >= this.start && current <= this.end);
+      if (this.active) this.toggleActive();
     },
     toggleActive() {
       this.$el.classList.toggle("md-card-schedule-active");
-    },
-    setWidth() {
-      this.$el.style.width = this.length * 4 + "px"; // range: 20 - 240
     }
   },
   mounted() {
-    if (this.active) this.toggleActive();
     this.setWidth();
+    this.setActive();
+    this.subtitle = this.end;
   }
 };
 </script>
