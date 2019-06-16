@@ -87,4 +87,18 @@ export default {
     let diffMs = new Date(end) - new Date(start);
     return Math.round(((diffMs % 86400000) % 3600000) / 60000);
   },
+
+  /**
+   * Count today's elasped time.
+   * @function
+   * @return {number} seconds
+   */
+  getElapsedSeconds() {
+    let now = new Date();
+    let hours = now.getHours() * 60 * 60;
+    let minutes = now.getMinutes() * 60;
+    let seconds = now.getSeconds();
+    return hours + minutes + seconds;
+  },
+
 };
