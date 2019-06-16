@@ -101,4 +101,13 @@ export default {
     return hours + minutes + seconds;
   },
 
+  /**
+   * @function
+   * @return {number} percentage of todays elapsed time
+   */
+  getTodayTimeProportion() {
+    let elapsedSeconds = this.getElapsedSeconds();
+    let dayMinutes = 1440;
+    return Math.floor((elapsedSeconds / 60) / dayMinutes * 100);
+  },
 };
