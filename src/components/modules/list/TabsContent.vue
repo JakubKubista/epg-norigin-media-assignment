@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions } from "vuex";
 
 import Api from "@/utils/config/api";
 import Axios from "axios";
@@ -44,14 +44,13 @@ export default {
   },
 
   computed: {
-    ...mapState('list', ['channels']),
+    ...mapState("list", ["channels"])
   },
   methods: {
-    ...mapActions('list', ['updateChannels']),
+    ...mapActions("list", ["updateChannels"]),
     getChannels() {
       Api.callService({ method: "get", service: "epg" }).then(response => {
         this.updateChannels(response.data.channels);
-        console.log(this.channels);
       });
     }
   },
