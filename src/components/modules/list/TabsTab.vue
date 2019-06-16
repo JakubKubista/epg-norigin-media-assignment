@@ -1,8 +1,8 @@
 <template>
   <div class="md-tab-date">
-      {{ dates.getDayOfWeekInOrder(order) }}
-      <br />
-      {{ dates.getDayAndMonthInOrder(order) }}
+    {{ dates.getDayOfWeekInOrder(order) }}
+    <br />
+    {{ dates.getDayAndMonthInOrder(order) }}
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
     order: 0
   },
   computed: {
-    dates: () => Dates,
-  },
+    dates: () => Dates
+  }
 };
 </script>
