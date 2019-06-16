@@ -1,61 +1,26 @@
 <template>
   <div class="md-content">
     <Timeline />
-    <div class="md-list-schedule">
-      <ButtonLogo :logo="'https://img.noriginmedia.com/cloudberry/logo_sky1.png'" />
-      <CardSchedule :title="card.title"
-                    :subtitle="card.subtitle"
-                    :active="card.active"
-                    :length="card.length" />
-      <CardSchedule :title="card.title"
-                    :subtitle="card.subtitle"
-                    :active="card.active"
-                    :length="card.length" />
-      <CardSchedule :title="card.title"
-                    :subtitle="card.subtitle"
-                    :active="card.active"
-                    :length="card.length" />
-      <CardSchedule :title="card.title"
-                    :subtitle="card.subtitle"
-                    :active="card.active"
-                    :length="card.length" />
-      <CardSchedule :title="card.title"
-                    :subtitle="card.subtitle"
-                    :active="card.active"
-                    :length="card.length" />
-      <CardSchedule :title="card.title"
-                    :subtitle="card.subtitle"
-                    :active="card.active"
-                    :length="card.length" />
-    </div>
-    <div class="md-list-schedule">
-      <ButtonLogo :logo="'https://img.noriginmedia.com/cloudberry/logo_sky1.png'" />
-      <CardSchedule :title="card.title"
-                    :subtitle="card.subtitle"
-                    :active="card.active"
-                    :length="card.length" />
-      <CardSchedule :title="card.title"
-                    :subtitle="card.subtitle"
-                    :active="true"
-                    :length="card.length" />
-    </div>
-    <div class="md-list-schedule">
-      <ButtonLogo :logo="'https://img.noriginmedia.com/cloudberry/logo_sky1.png'" />
-      <CardSchedule :title="card.title"
-                    :subtitle="card.subtitle"
-                    :active="card.active"
-                    :length="card.length" />
-      <CardSchedule :title="card.title"
-                    :subtitle="card.subtitle"
-                    :active="true"
-                    :length="card.length" />
+
+    <div v-for="channel in channels"
+         :key="channel.id">
+      <div class="md-list-schedule">
+        <ButtonLogo :logo="channel.images.logo"
+                    :title="channel.title" />
+        <div v-for="(schedule, index)  in channel.schedules"
+                      :key="index"
+                      class="md-schedule">
+          <CardSchedule :title="schedule.title"
+                        :start="schedule.start"
+                        :end="schedule.end" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import Api from "@/utils/config/api";
-import Dates from "@/utils/base/dates";
 import Axios from "axios";
 import Timeline from "@/components/base/Timeline";
 import ButtonLogo from "@/components/base/ButtonLogo";
@@ -70,17 +35,8 @@ export default {
   },
   data() {
     return {
-      channels: null,
-      card: {
-        title: "Vikings",
-        subtitle: "14:20 - 15:20",
-        active: false,
-        length: 60
-      }
+      channels: null
     };
-  },
-  computed: {
-    dates: () => Dates,
   },
   methods: {
     getChannels() {
