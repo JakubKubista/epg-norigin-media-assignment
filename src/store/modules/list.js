@@ -17,7 +17,19 @@ export default {
   },
 
   actions: {
+    /**
+     * Send async channels to mutation.
+     * TODO: Add validation and error handler.
+     * @param {any} state
+     * @param {array} channels
+     */
+    updateChannels({
+      commit
+    }, channels) {
+      commit('updateChannels', channels);
+    }
   },
+
   mutations: {
     /**
      * Save channels for render into lists.
