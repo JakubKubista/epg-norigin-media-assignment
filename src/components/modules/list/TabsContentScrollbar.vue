@@ -34,8 +34,9 @@ export default {
     setDefaultScrollPosition() {
       let scrollbarMax =
         this.scrollbar.scrollWidth - this.scrollbar.clientWidth;
-      let timeProportion = Dates.getTodayTimeProportion();
-      this.scrollbar.scrollLeft = (scrollbarMax * timeProportion) / 100;
+      let timeProportion = Dates.getTodayTimeProportion()/100;
+      timeProportion = timeProportion >= 0.9 ? 1 : timeProportion + 0.1;
+      this.scrollbar.scrollLeft = (scrollbarMax * timeProportion);
     }
   },
   mounted() {
