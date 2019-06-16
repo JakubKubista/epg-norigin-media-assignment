@@ -1,6 +1,7 @@
 .md-timeline {
   white-space: nowrap;
   list-style: none;
+  padding-left: $margin-left-content;
 }
 
 .md-timeline::-webkit-scrollbar {
@@ -13,7 +14,6 @@
   height: $height-timeline;
   border-right: solid 1px $color-border;
   border-top: solid 1px $color-border;
-  border-bottom: solid 1px $color-border;
   text-align: center;
   padding-top: 4px;
   color: $color-font;
