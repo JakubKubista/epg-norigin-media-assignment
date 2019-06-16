@@ -41,9 +41,9 @@ export default {
       this.$el.style.width = this.length * 4 + "px"; // range: 20 - 240
     },
     setActive() {
-      let current = new Date();
+      let now = new Date();
       let active =
-        current >= new Date(this.start) && current <= new Date(this.end);
+        now >= new Date(this.start) && now <= new Date(this.end);
       if (this.active != active) this.toggleActive();
     },
     toggleActive() {
