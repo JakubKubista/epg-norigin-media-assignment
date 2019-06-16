@@ -59,5 +59,18 @@ export default {
     return this.getDayOfWeek(
       this.getDateInOrder(order)
     );
-  }
+  },
+
+  /**
+   * Transform string dates into dates and
+   * get minutes of their difference.
+   * @function
+   * @param {string} start
+   * @param {string} end
+   * @return {number} minutes between two dates
+   */
+  getMinuteDiffOfDates(start, end) {
+    let diffMs = new Date(end) - new Date(start);
+    return Math.round(((diffMs % 86400000) % 3600000) / 60000);
+  },
 };

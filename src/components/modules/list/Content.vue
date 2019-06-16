@@ -55,6 +55,7 @@
 
 <script>
 import Api from "@/utils/config/api";
+import Dates from "@/utils/base/dates";
 import Axios from "axios";
 import Timeline from "@/components/base/Timeline";
 import ButtonLogo from "@/components/base/ButtonLogo";
@@ -77,6 +78,9 @@ export default {
         length: 60
       }
     };
+  },
+  computed: {
+    dates: () => Dates,
   },
   methods: {
     getChannels() {
