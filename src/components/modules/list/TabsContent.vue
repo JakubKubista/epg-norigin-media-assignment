@@ -25,6 +25,8 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex';
+
 import Api from "@/utils/config/api";
 import Axios from "axios";
 import Timeline from "@/components/base/Timeline";
@@ -40,15 +42,15 @@ export default {
     Card,
     Scrollbar
   },
-  data() {
-    return {
-      channels: null
-    };
+
+  computed: {
+    ...mapState('list', ['channels']),
   },
   methods: {
+    ...mapActions('list', ['updateChannels']),
     getChannels() {
       Api.callService({ method: "get", service: "epg" }).then(response => {
-        this.channels = response.data.channels;
+        this.updateChannels(response.data.channels);
         console.log(this.channels);
       });
     }
