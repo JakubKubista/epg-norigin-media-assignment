@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Dates from "@/utils/base/dates";
+import Scrollbar from "@/utils/base/scrollbar";
 import Timeline from "@/components/base/Timeline";
 import { clearTimeout } from "timers";
 
@@ -31,13 +31,6 @@ export default {
         ".md-content"
       ).scrollLeft = this.scrollbar.scrollLeft;
     },
-    setDefaultScrollPosition() {
-      let scrollbarMax =
-        this.scrollbar.scrollWidth - this.scrollbar.clientWidth;
-      let timeProportion = Dates.getTodayTimeProportion()/100;
-      timeProportion = timeProportion >= 0.9 ? 1 : timeProportion + 0.1;
-      this.scrollbar.scrollLeft = (scrollbarMax * timeProportion);
-    }
   },
   mounted() {
     this.scrollbar.addEventListener("scroll", this.handleScroll);
@@ -47,7 +40,7 @@ export default {
     clearTimeout(this.timeout);
     this.timeout = null;
     this.timeout = setTimeout(() => {
-      that.setDefaultScrollPosition();
+      Scrollbar.setDefaultScrollPosition();
     }, 1);
   },
   beforeDestroy() {
