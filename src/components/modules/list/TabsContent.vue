@@ -13,7 +13,7 @@
           <div v-for="(schedule, index)  in channel.schedules"
                :key="index"
                class="md-schedule">
-            <CardSchedule :title="schedule.title"
+            <Card :title="schedule.title"
                           :start="schedule.start"
                           :end="schedule.end" />
           </div>
@@ -29,7 +29,7 @@ import Api from "@/utils/config/api";
 import Axios from "axios";
 import Timeline from "@/components/base/Timeline";
 import ButtonLogo from "@/components/base/ButtonLogo";
-import CardSchedule from "@/components/base/CardSchedule";
+import Card from "@/components/modules/list/TabsContentCard";
 import Scrollbar from "@/components/modules/list/TabsContentScrollbar";
 
 export default {
@@ -37,7 +37,7 @@ export default {
   components: {
     Timeline,
     ButtonLogo,
-    CardSchedule,
+    Card,
     Scrollbar
   },
   data() {
