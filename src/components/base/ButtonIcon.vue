@@ -31,7 +31,7 @@ export default {
     toggleActive() {
       document
         .querySelector(".md-color-button-off")
-        .classList.toggle("md-color-button-on");
+        .classList.toggle("md-color-primary");
     }
   }
 };
