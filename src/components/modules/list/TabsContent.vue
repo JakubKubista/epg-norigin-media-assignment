@@ -29,7 +29,7 @@ import Axios from "axios";
 import Timeline from "@/components/base/Timeline";
 import ButtonLogo from "@/components/base/ButtonLogo";
 import CardSchedule from "@/components/base/CardSchedule";
-import Scrollbar from "@/components/modules/list/Scrollbar";
+import Scrollbar from "@/components/modules/list/TabsContentScrollbar";
 
 export default {
   name: "list-content",

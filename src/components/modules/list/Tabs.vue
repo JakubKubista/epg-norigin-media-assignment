@@ -33,8 +33,8 @@
 <script>
 import Dates from "@/utils/constants/dates";
 import Labels from "@/utils/constants/labels";
-import Content from "@/components/modules/list/Content";
-import Tab from "@/components/modules/list/Tab";
+import Content from "@/components/modules/list/TabsContent";
+import Tab from "@/components/modules/list/TabsTab";
 import { dragscroll } from "vue-dragscroll";
 
 export default {
