@@ -21,7 +21,7 @@
       <v-tab-item v-for="i in count"
                   :key="i"
                   :value="'tab-' + i">
-        <Content v-if="i===middle" />
+        <Content v-if="i===tabMiddle" />
         <h2 v-else
             class="md-message-content-centred">
           {{ notAvailable }}
@@ -51,12 +51,12 @@ export default {
   },
   computed: {
     count: () => Dates.count,
-    middle: () => Dates.count / 2,
+    tabMiddle: () => Dates.count / 2,
     notAvailable: () => Labels.message.fullScreen.notAvailable
   },
   methods: {
     defaultTab() {
-      this.active = "tab-" + this.middle;
+      this.active = "tab-" + this.tabMiddle;
     }
   },
   directives: {

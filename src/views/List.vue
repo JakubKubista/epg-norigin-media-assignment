@@ -4,7 +4,7 @@
                 :icon="star" />
     <Tabs @changed="tabActive=$event" />
     <v-btn class="md-button-scrollbar"
-           v-show="tabActive===tabMiddle"
+           v-show="tabActive==='tab-'+tabMiddle"
            @click="setDefaultScrollPosition"> {{ now }} </v-btn>
   </div>
 </template>
@@ -32,7 +32,7 @@ export default {
   computed: {
     star: () => Icons.star,
     now: () => Labels.button.now,
-    tabMiddle: () => "tab-" + Dates.count / 2
+    tabMiddle: () => Dates.count / 2
   },
   methods: {
     setDefaultScrollPosition() {
