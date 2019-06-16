@@ -30,6 +30,14 @@ export default {
     onClick() {
       this.$emit("click");
     },
+    setWidth() {
+      this.length = Dates.getMinuteDiffOfDates(this.start, this.end);
+      this.$el.style.width = this.length * 4 + "px"; // range: 20 - 240
+    },
+    checkActive() {
+      let current = new Date();
+      this.active = (current >= this.start && current <= this.end);
+    },
     toggleActive() {
       this.$el.classList.toggle("md-card-schedule-active");
     },
