@@ -14,22 +14,19 @@ export default {
   components: {
     Timeline
   },
+  computed: {
+    scrollbar: () => document.querySelector(".md-scrollbar")
+  },
   methods: {
     handleScroll(event) {
-      document.querySelector(".md-content").scrollLeft = document.querySelector(
-        ".md-scrollbar"
-      ).scrollLeft;
+      document.querySelector(".md-content").scrollLeft = this.scrollbar.scrollLeft;
     }
   },
   mounted() {
-    document
-      .querySelector(".md-scrollbar")
-      .addEventListener("scroll", this.handleScroll);
+    this.scrollbar.addEventListener("scroll", this.handleScroll);
   },
   beforeDestroy() {
-    document
-      .querySelector(".md-scrollbar")
-      .removeEventListener("scroll", this.handleScroll);
+    this.scrollbar.removeEventListener("scroll", this.handleScroll);
   }
 };
 </script>
