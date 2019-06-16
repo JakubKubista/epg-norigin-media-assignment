@@ -26,7 +26,7 @@ export default {
       .querySelector(".md-scrollbar")
       .addEventListener("scroll", this.handleScroll);
   },
-  destroyed() {
+  beforeDestroy() {
     document
       .querySelector(".md-scrollbar")
       .removeEventListener("scroll", this.handleScroll);
