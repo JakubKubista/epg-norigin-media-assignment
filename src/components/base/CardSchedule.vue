@@ -35,6 +35,11 @@ export default {
     onClick() {
       this.$emit("click");
     },
+    setSubtitle() {
+      let start = Dates.getHourAndMinute(new Date(this.start));
+      let end = Dates.getHourAndMinute(new Date(this.end));
+      this.subtitle = start + " - " + end;
+    },
     setWidth() {
       this.length = Dates.getMinuteDiffOfDates(this.start, this.end);
       this.$el.style.width = this.length * 4 + "px"; // range: 20 - 240
@@ -49,9 +54,9 @@ export default {
     }
   },
   mounted() {
+    this.setSubtitle();
     this.setWidth();
     this.setActive();
-    this.subtitle = this.end;
   }
 };
 </script>
