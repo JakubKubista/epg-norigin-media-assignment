@@ -1,6 +1,7 @@
 .md-content::-webkit-scrollbar
 {
   height: 0.7em;
+  width: 0.7em;
   background: transparent;
 }
 
@@ -15,6 +16,11 @@
   background-color: $color-primary;
   border-radius: 5px;
 }
+
 .md-content::-webkit-scrollbar-track-piece {
   width: 10px;
+}
+
+.md-content::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
