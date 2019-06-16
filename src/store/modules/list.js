@@ -14,5 +14,18 @@ export default {
     tabMiddleNumber: Dates.count / 2,
     channels: [], // the main content of list page
     scrollPosition: 0
+  },
+
+  actions: {
+  },
+  mutations: {
+    /**
+     * Save channels for render into lists.
+     * @param {any} state
+     * @param {array} channels
+     */
+    updateChannels(state, channels) {
+      state.channels = [...state.channels, ...channels];
+    }
   }
 };
