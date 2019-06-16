@@ -42,6 +42,8 @@ export default {
     let hh = String(date.getHours());
     let mm = String(date.getMinutes());
 
+    if (mm === '0') mm ='00';
+
     return hh + ':' + mm;
   },
 
