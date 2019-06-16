@@ -37,9 +37,9 @@
 }
 
 .md-button-scrollbar {
-  position: absolute;
+  position: fixed;
   background-color: $color-primary;
-  bottom: 0px;
+  bottom: 80px;
   right: 20px;
   z-index: 2;
 }
