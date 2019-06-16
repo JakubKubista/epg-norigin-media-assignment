@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div class="md-scrollbar">
-      <div class="md-invisibile">
-        <Timeline />
-      </div>
-    </div>
+    <Scrollbar />
     <div class="md-content">
       <Timeline />
 
@@ -33,13 +29,15 @@ import Axios from "axios";
 import Timeline from "@/components/base/Timeline";
 import ButtonLogo from "@/components/base/ButtonLogo";
 import CardSchedule from "@/components/base/CardSchedule";
+import Scrollbar from "@/components/modules/list/Scrollbar";
 
 export default {
   name: "list-content",
   components: {
     Timeline,
     ButtonLogo,
-    CardSchedule
+    CardSchedule,
+    Scrollbar
   },
   data() {
     return {
@@ -52,23 +50,10 @@ export default {
         this.channels = response.data.channels;
         console.log(this.channels);
       });
-    },
-    handleScroll(event) {
-      this.$el.querySelector(".md-content").scrollLeft = this.$el.querySelector(
-        ".md-scrollbar"
-      ).scrollLeft;
     }
   },
   mounted() {
-    this.$el
-      .querySelector(".md-scrollbar")
-      .addEventListener("scroll", this.handleScroll);
     this.getChannels();
-  },
-  destroyed() {
-    this.$el
-      .querySelector(".md-scrollbar")
-      .removeEventListener("scroll", this.handleScroll);
   }
 };
 </script>
