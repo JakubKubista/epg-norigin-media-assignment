@@ -5,6 +5,9 @@
  */
 
 export default {
+  button: {
+    now: 'Now'
+  },
   message: {
     fullScreen: {
       notImplemented: "Comming soon",
