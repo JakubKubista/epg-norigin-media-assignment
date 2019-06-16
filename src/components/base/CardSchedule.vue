@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import Dates from "@/utils/base/dates";
+
 export default {
   name: "card-schedule",
   props: {
@@ -25,6 +27,9 @@ export default {
     active() {
       this.toggleActive();
     }
+  },
+  computed: {
+    dates: () => Dates
   },
   methods: {
     onClick() {
