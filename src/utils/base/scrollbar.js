@@ -17,7 +17,16 @@ export default {
     let scrollbarMax =
       scrollbar.scrollWidth - scrollbar.clientWidth;
     let timeProportion = Dates.getTodayTimeProportion()/100;
-    timeProportion = timeProportion >= 0.9 ? 1 : timeProportion + 0.1;
+    timeProportion = 0.5;
+    if (timeProportion >= 0.9) {
+      timeProportion = 1;
+    } else if (timeProportion <= 0.1) {
+      timeProportion = 0;
+    } else if (timeProportion < 0.5){
+      timeProportion -= 0.1;
+    } else {
+      timeProportion += 0.1;
+    }
     scrollbar.scrollLeft = (scrollbarMax * timeProportion);
   }
 };
