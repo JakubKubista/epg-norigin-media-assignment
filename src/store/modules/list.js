@@ -33,11 +33,13 @@ export default {
   mutations: {
     /**
      * Save channels for render into lists.
+     * TODO: With lazy loading and ES6 is easy
+     * to add new groups of elements.
      * @param {any} state
      * @param {array} channels
      */
     updateChannels(state, channels) {
-      state.channels = [...state.channels, ...channels];
+      state.channels = [...channels];
     }
   }
 };
