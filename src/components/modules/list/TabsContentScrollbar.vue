@@ -9,6 +9,7 @@
 <script>
 import Dates from "@/utils/base/dates";
 import Timeline from "@/components/base/Timeline";
+import { clearTimeout } from 'timers';
 
 export default {
   name: "scrollbar",
@@ -17,7 +18,8 @@ export default {
   },
   data() {
     return {
-      position: 0
+      position: 0,
+      timeout: null
     };
   },
   computed: {
@@ -38,9 +40,13 @@ export default {
   },
   mounted() {
     this.scrollbar.addEventListener("scroll", this.handleScroll);
-  },
-  updated() {
-    this.setDefaultScrollPosition();
+    let that = this;
+     // timout is added because of 1st mounted loop delay about DOM
+    clearTimeout(this.timeout);
+    this.timeout = null;
+    this.timeout = setTimeout(() => {
+      that.setDefaultScrollPosition();
+    }, 1);
   },
   beforeDestroy() {
     this.scrollbar.removeEventListener("scroll", this.handleScroll);
