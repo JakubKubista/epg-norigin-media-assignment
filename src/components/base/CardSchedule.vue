@@ -11,9 +11,15 @@ export default {
   name: "card-schedule",
   props: {
     title: String,
-    subtitle: String,
-    active: Boolean,
-    length: Number
+    start: String,
+    end: String
+  },
+  data() {
+    return {
+      active: false,
+      subtitle: "",
+      length: null
+    };
   },
   watch: {
     active() {
