@@ -10,8 +10,8 @@ export default {
   /**
    * Set scrollbar on default position by
    * elapsed time of today.
+   * TODO: should be called with vuex acion.
    */
-
   setDefaultScrollPosition() {
     let scrollbar = document.querySelector(".md-scrollbar");
     let scrollbarMax =
@@ -28,5 +28,6 @@ export default {
       timeProportion += 0.1;
     }
     scrollbar.scrollLeft = (scrollbarMax * timeProportion);
+    return scrollbar.scrollLeft;
   }
 };

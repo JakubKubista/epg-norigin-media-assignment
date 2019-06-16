@@ -39,7 +39,7 @@ export default {
     clearTimeout(this.timeout);
     this.timeout = null;
     this.timeout = setTimeout(() => {
-      Scrollbar.setDefaultScrollPosition();
+      this.position = Scrollbar.setDefaultScrollPosition();
     }, 1);
   },
   beforeDestroy() {
