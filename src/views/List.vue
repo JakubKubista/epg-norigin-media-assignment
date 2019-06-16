@@ -2,14 +2,16 @@
   <div class="md-content-program">
     <ButtonIcon @click="favourite = $event"
                 :icon="icon" />
-    <Tabs />
+    <Tabs @changed="tabActive=$event" />
     <v-btn class="md-button-scrollbar"
+           v-show="tabActive===tabMiddle"
            @click="setDefaultScrollPosition"> {{ now }} </v-btn>
   </div>
 </template>
 
 <script>
 import Labels from "@/utils/constants/labels";
+import Dates from "@/utils/constants/dates";
 import Scrollbar from "@/utils/base/scrollbar";
 import ButtonIcon from "@/components/base/ButtonIcon";
 import Tabs from "@/components/modules/list/Tabs";
@@ -23,16 +25,21 @@ export default {
   data() {
     return {
       icon: "star",
-      favourite: false
+      favourite: false,
+      tabActive: ""
     };
   },
   computed: {
-    now: () => Labels.button.now
+    now: () => Labels.button.now,
+    tabMiddle: () => "tab-" + Dates.count / 2
   },
   methods: {
     setDefaultScrollPosition() {
       Scrollbar.setDefaultScrollPosition();
     }
+  },
+  mounted() {
+    this.tabActive = this.tabMiddle;
   }
 };
 </script>

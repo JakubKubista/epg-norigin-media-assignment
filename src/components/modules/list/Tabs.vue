@@ -4,7 +4,8 @@
           dark
           hide-slider
           centered
-          color="#252525">
+          color="#252525"
+          @change="$emit('changed', $event)">
 
     <v-tab v-for="i in count"
            :key="i"
