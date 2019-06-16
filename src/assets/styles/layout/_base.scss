@@ -5,20 +5,13 @@
 }
 
 .md-content-program {
+  padding-top: $height-element + 18px;
   position: relative;
   margin-left: $margin-left-content;
 }
 
-.md-message-centred, .md-message-content-centred {
-  position: relative;
-  text-align: center;
-  color: $color-font;
-}
-
-.md-message-centred {
-  top: 40%;
-}
-
-.md-message-content-centred {
-  padding: 35%;
+@media only screen and (max-width: 800px) {
+  .md-content-program {
+    padding-top: $height-element + 10px;
+  }
 }

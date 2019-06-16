@@ -1,6 +1,7 @@
 <template>
   <v-toolbar :color="background"
-             dark>
+             dark
+             fixed>
     <v-btn icon>
       <v-icon> {{ iconLeft }} </v-icon>
     </v-btn>

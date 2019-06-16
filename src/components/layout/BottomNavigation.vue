@@ -1,8 +1,8 @@
 <template>
   <v-bottom-nav :active.sync="activeNavigation"
                 :value="true"
-                absolute
                 dark
+                fixed
                 class="md-background-secondary"
                 shift
                 @update:active="$emit('navigationChanged', $event)">

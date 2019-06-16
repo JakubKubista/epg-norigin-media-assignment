@@ -11,8 +11,16 @@
 }
 
 .md-button-icon {
+  margin-top: $height-element + 18px;
   left: -$height-element - 8px;
 }
+
+@media only screen and (max-width: 800px) {
+  .md-button-icon {
+    margin-top: $height-element + 10px;
+  }
+}
+
 
 .md-button-logo {
   position: relative;
