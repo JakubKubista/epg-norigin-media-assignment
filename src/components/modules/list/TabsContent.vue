@@ -4,11 +4,12 @@
     <div class="md-content">
       <Timeline />
 
-      <div v-for="channel in channels"
-           :key="channel.id">
+      <div v-for="(channel, index) in channels"
+           :key="index">
         <div class="md-list-schedule">
           <ButtonLogo :logo="channel.images.logo"
-                      :title="channel.title" />
+                      :title="channel.title"
+                      :index="index" />
           <div v-for="(schedule, index)  in channel.schedules"
                :key="index"
                class="md-schedule">

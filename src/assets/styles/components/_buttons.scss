@@ -23,9 +23,8 @@
 
 
 .md-button-logo {
-  position: relative;
+  position: fixed;
   height: $height-element;
-  float: left;
   padding-left: 0;
   margin-left: 0;
   border-bottom: solid 1px $color-border;

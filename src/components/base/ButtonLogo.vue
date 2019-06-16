@@ -18,7 +18,22 @@ export default {
   name: "button-logo",
   props: {
     logo: String,
-    title: String
+    title: String,
+    index: Number
+  },
+  data() {
+    return {
+      top: null
+    };
+  },
+  methods: {
+    setPosition() {
+      this.top = 153 + (this.index * 48) + "px";
+      this.$el.children[0].style.top = this.top;
+    }
+  },
+  mounted() {
+    this.setPosition();
   }
 };
 </script>
