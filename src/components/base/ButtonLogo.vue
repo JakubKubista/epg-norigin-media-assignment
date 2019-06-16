@@ -29,7 +29,7 @@ export default {
   methods: {
     setPosition() {
       let topActual = Number(
-        getComputedStyle(this.$el.children[0]).top.slice(0,-2)
+        getComputedStyle(this.$el.children[0]).top.slice(0, -2)
       );
       this.top = topActual + this.index * 48 + "px";
       this.$el.children[0].style.top = this.top;

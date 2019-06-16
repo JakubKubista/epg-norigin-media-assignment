@@ -3,7 +3,8 @@
     <ButtonIcon @click="favourite = $event"
                 :icon="icon" />
     <Tabs />
-    <v-btn class="md-button-scrollbar" @click="setDefaultScrollPosition"> {{ now }} </v-btn>
+    <v-btn class="md-button-scrollbar"
+           @click="setDefaultScrollPosition"> {{ now }} </v-btn>
   </div>
 </template>
 
@@ -31,7 +32,7 @@ export default {
   methods: {
     setDefaultScrollPosition() {
       Scrollbar.setDefaultScrollPosition();
-    },
+    }
   }
 };
 </script>

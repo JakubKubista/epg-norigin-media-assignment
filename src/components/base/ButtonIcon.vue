@@ -11,7 +11,7 @@
 export default {
   name: "button-icon",
   props: {
-    icon: String,
+    icon: String
   },
   data() {
     return {

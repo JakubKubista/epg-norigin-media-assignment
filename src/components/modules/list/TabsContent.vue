@@ -14,8 +14,8 @@
                :key="index"
                class="md-schedule">
             <Card :title="schedule.title"
-                          :start="schedule.start"
-                          :end="schedule.end" />
+                  :start="schedule.start"
+                  :end="schedule.end" />
           </div>
         </div>
       </div>
