@@ -33,6 +33,19 @@ export default {
   },
 
   /**
+   * Format date into string with hour and minute
+   * @function
+   * @param {date} date
+   * @return {string} hour and minute
+   */
+  getHourAndMinute(date) {
+    let hh = String(date.getHours());
+    let mm = String(date.getMinutes());
+
+    return hh + ':' + mm;
+  },
+
+  /**
    * Get first 3 letters of day from input date.
    * @function
    * @param {date} date
