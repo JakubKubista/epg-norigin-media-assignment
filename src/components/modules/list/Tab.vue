@@ -1,13 +1,13 @@
 <template>
   <div class="md-tab-date">
-      {{ base.getDayOfWeekInOrder(order) }}
+      {{ dates.getDayOfWeekInOrder(order) }}
       <br />
-      {{ base.getDayAndMonthInOrder(order) }}
+      {{ dates.getDayAndMonthInOrder(order) }}
   </div>
 </template>
 
 <script>
-import Base from "@/utils/base/dates";
+import Dates from "@/utils/base/dates";
 
 export default {
   name: "list-tab",
@@ -15,7 +15,7 @@ export default {
     order: 0
   },
   computed: {
-    base: () => Base,
+    dates: () => Dates,
   },
 };
 </script>
