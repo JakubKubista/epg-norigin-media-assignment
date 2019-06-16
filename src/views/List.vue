@@ -1,7 +1,7 @@
 <template>
   <div class="md-content-program">
     <ButtonIcon @click="favourite = $event"
-                  :icon="icon" />
+                :icon="icon" />
     <Tabs />
   </div>
 </template>

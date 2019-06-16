@@ -8,8 +8,8 @@
         <ButtonLogo :logo="channel.images.logo"
                     :title="channel.title" />
         <div v-for="(schedule, index)  in channel.schedules"
-                      :key="index"
-                      class="md-schedule">
+             :key="index"
+             class="md-schedule">
           <CardSchedule :title="schedule.title"
                         :start="schedule.start"
                         :end="schedule.end" />

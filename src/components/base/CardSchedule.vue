@@ -46,7 +46,7 @@ export default {
     },
     setActive() {
       let current = new Date();
-      this.active = (current >= this.start && current <= this.end);
+      this.active = current >= this.start && current <= this.end;
       if (this.active) this.toggleActive();
     },
     toggleActive() {
