@@ -14,8 +14,13 @@
   height: $height-timeline;
   border-right: solid 1px $color-border;
   border-top: solid 1px $color-border;
+  border-bottom: solid 1px $color-border;
   text-align: center;
   padding-top: 4px;
   color: $color-font;
   background-color: $color-secondary;
+}
+
+.md-timeline-element:first-child {
+  box-shadow: -$margin-left-content 0 30px 1px $color-border;
 }
