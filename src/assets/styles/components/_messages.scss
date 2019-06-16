@@ -1,0 +1,13 @@
+.md-message-centred, .md-message-content-centred {
+  position: relative;
+  text-align: center;
+  color: $color-font;
+}
+
+.md-message-centred {
+  top: 40%;
+}
+
+.md-message-content-centred {
+  padding: 35%;
+}
