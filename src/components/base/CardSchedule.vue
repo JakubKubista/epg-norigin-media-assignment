@@ -1,8 +1,8 @@
 <template>
   <v-card class="md-card-schedule"
           @click="onClick">
-    <div><b> {{ title }} </b></div>
-    <div class="subtitle"> {{ subtitle }} </div>
+    <div class="md-title"> {{ title }} </div>
+    <span class="md-subtitle"> {{ subtitle }} </span>
   </v-card>
 </template>
 
@@ -62,7 +62,10 @@ export default {
 </script>
 
 <style lang="scss">
-.subtitle {
+.md-title {
+    overflow:hidden;
+}
+.md-subtitle {
   opacity: 0.6;
   font-size: 10px;
 }
