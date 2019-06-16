@@ -1,5 +1,5 @@
 <template>
-  <div div class="md-content">
+  <div class="md-content">
     <Timeline />
     <div class="md-list-schedule">
       <ButtonLogo :logo="'https://img.noriginmedia.com/cloudberry/logo_sky1.png'" />
@@ -18,6 +18,25 @@
       <CardSchedule :title="card.title"
                     :subtitle="card.subtitle"
                     :active="card.active"
+                    :length="card.length" />
+      <CardSchedule :title="card.title"
+                    :subtitle="card.subtitle"
+                    :active="card.active"
+                    :length="card.length" />
+      <CardSchedule :title="card.title"
+                    :subtitle="card.subtitle"
+                    :active="card.active"
+                    :length="card.length" />
+    </div>
+    <div class="md-list-schedule">
+      <ButtonLogo :logo="'https://img.noriginmedia.com/cloudberry/logo_sky1.png'" />
+      <CardSchedule :title="card.title"
+                    :subtitle="card.subtitle"
+                    :active="card.active"
+                    :length="card.length" />
+      <CardSchedule :title="card.title"
+                    :subtitle="card.subtitle"
+                    :active="true"
                     :length="card.length" />
     </div>
     <div class="md-list-schedule">

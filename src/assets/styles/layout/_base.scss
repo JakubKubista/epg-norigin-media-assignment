@@ -1,17 +1,12 @@
 .md-content {
-  list-style: none;
   width: 100%;
-  height: 83vh;
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  overflow: -moz-scrollbars-none;
-  background-color: $color-element;
+  height:100%;
+  overflow:auto;
+  white-space:nowrap;
 }
 
 .md-content-program {
   position: relative;
-  height: 100%;
   margin-left: $margin-left-content;
 }
 

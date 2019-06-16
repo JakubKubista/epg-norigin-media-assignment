@@ -1,8 +1,6 @@
 .md-list-schedule {
-  border-bottom: solid 1px $color-border;
-  width: 100%;
   margin: 0;
   padding: 0;
   white-space: nowrap;
-  overflow: hidden;
+  list-style: none;
 }
