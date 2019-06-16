@@ -9,7 +9,7 @@
 
     <v-btn v-for="icon in icons"
            :key="icon"
-           class="md-color-button-on"
+           class="md-color-primary"
            flat
            :value="icon">
 

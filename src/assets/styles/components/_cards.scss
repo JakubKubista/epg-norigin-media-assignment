@@ -1,10 +1,15 @@
 .md-card-schedule {
+  position: relative;
+  display: inline-block;
+  height: $height-element;
+  padding: 8px 10px;
   background-color: $color-element;
   color: $color-font;
-  padding: 8px 10px;
-  height: $height-element;
   font-size: 12px;
+  border-right: solid 1px $color-border;
+  border-bottom: solid 1px $color-border;
   border-radius: 0;
+  box-shadow: none;
 }
 
 .md-card-schedule-active {
