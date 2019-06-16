@@ -21,11 +21,24 @@
   }
 }
 
-
 .md-button-logo {
   position: fixed;
   height: $height-element;
   padding-left: 0;
   margin-left: 0;
   border-bottom: solid 1px $color-border;
+}
+
+.md-button-scrollbar {
+  position: absolute;
+  background-color: $color-primary;
+  bottom: 0px;
+  right: 20px;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 800px) {
+  .md-button-scrollbar {
+    bottom: 80px;
+  }
 }

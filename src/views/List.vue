@@ -3,6 +3,7 @@
     <ButtonIcon @click="favourite = $event"
                 :icon="icon" />
     <Tabs />
+    <v-btn class="md-button-scrollbar">Now</v-btn>
   </div>
 </template>
 
