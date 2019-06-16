@@ -3,6 +3,7 @@
           show-arrows
           dark
           hide-slider
+          centered
           color="#252525">
 
     <v-tab v-for="i in count"
