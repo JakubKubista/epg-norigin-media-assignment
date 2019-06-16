@@ -36,7 +36,6 @@ export default {
     this.scrollbar.addEventListener("scroll", this.handleScroll);
 
     // timout is added because of 1st mounted loop delay about DOM
-    let that = this;
     clearTimeout(this.timeout);
     this.timeout = null;
     this.timeout = setTimeout(() => {
