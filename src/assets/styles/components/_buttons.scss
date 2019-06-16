@@ -27,6 +27,13 @@
   padding-left: 0;
   margin-left: 0;
   border-bottom: solid 1px $color-border;
+  top: 154px;
+}
+
+@media only screen and (max-width: 800px) {
+  .md-button-logo {
+    top: 145px;
+  }
 }
 
 .md-button-scrollbar {
