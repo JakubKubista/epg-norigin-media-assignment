@@ -11,7 +11,6 @@
 
 <script>
 import { mapState, mapMutations } from "vuex";
-import Dates from "@/utils/constants/dates";
 import Icons from "@/utils/constants/icons";
 import Labels from "@/utils/constants/labels";
 import Scrollbar from "@/utils/base/scrollbar";

@@ -39,8 +39,7 @@ export default {
     },
     setActive() {
       let now = new Date();
-      let active =
-        now >= new Date(this.start) && now <= new Date(this.end);
+      let active = now >= new Date(this.start) && now <= new Date(this.end);
       if (this.active != active) this.toggleActive();
     },
     toggleActive() {
@@ -53,7 +52,7 @@ export default {
       this.interval = setInterval(() => {
         this.setActive();
       }, 60000);
-    },
+    }
   },
   mounted() {
     this.setSubtitle();

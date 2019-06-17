@@ -29,7 +29,6 @@
 import { mapState, mapActions } from "vuex";
 
 import Api from "@/utils/config/api";
-import Axios from "axios";
 import Timeline from "@/components/base/Timeline";
 import ButtonLogo from "@/components/base/ButtonLogo";
 import Card from "@/components/modules/list/TabsContentCard";
