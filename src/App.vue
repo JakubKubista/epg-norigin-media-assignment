@@ -23,9 +23,13 @@ export default {
   },
   data() {
     return {
-      toolbarIconLeft: "person",
       toolbarBackground: "#000000"
     };
+  },
+  computed: {
+    toolbarIconLeft() {
+      return this.$route.name === 'list'? 'person' : 'arrow_back_ios';
+    },
   },
   methods: {
     goTo(event) {
