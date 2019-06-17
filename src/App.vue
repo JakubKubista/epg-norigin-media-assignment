@@ -28,8 +28,8 @@ export default {
   },
   computed: {
     toolbarIconLeft() {
-      return this.$route.name === 'list'? 'person' : 'arrow_back_ios';
-    },
+      return this.$route.name === "list" ? "person" : "arrow_back_ios";
+    }
   },
   methods: {
     goTo(event) {

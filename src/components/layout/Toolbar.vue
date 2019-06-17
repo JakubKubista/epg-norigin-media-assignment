@@ -2,7 +2,8 @@
   <v-toolbar :color="background"
              dark
              fixed>
-    <v-btn icon>
+    <v-btn icon
+           @click="goBack">
       <v-icon> {{ iconLeft }} </v-icon>
     </v-btn>
 
@@ -32,8 +33,8 @@ export default {
   },
   methods: {
     goBack() {
-      this.$router.back();
-    },
-  },
+      if (this.$route.name === "details") this.$router.back();
+    }
+  }
 };
 </script>
