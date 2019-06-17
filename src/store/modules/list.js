@@ -9,10 +9,10 @@ import Dates from '@/utils/constants/dates';
 export default {
   namespaced: true,
   state: {
+    channels: [], // the main content of list page
     favourite: false, // filter for favourite programs
     tabActiveId: 'tab-' + Dates.count / 2,
     tabMiddleNumber: Dates.count / 2,
-    channels: [], // the main content of list page
     scrollPosition: 0
   },
 
@@ -51,6 +51,15 @@ export default {
      */
     updateChannels(state, channels) {
       state.channels = [...channels];
+    },
+
+    /**
+     * Save favourite for render.
+     * @param {any} state
+     * @param {array} favourite
+     */
+    updateFavourite(state, favourite) {
+      state.favourite = favourite;
     },
 
     /**
