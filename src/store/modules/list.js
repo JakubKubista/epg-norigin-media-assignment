@@ -27,7 +27,18 @@ export default {
       commit
     }, channels) {
       commit('updateChannels', channels);
-    }
+    },
+
+    /**
+     * Send async tabActiveId to mutation.
+     * @param {any} state
+     * @param {array} tabActiveId
+     */
+    updateTabActiveId({
+      commit
+    }, tabActiveId) {
+      commit('updateTabActiveId', tabActiveId);
+    },
   },
 
   mutations: {
@@ -40,6 +51,15 @@ export default {
      */
     updateChannels(state, channels) {
       state.channels = [...channels];
+    },
+
+    /**
+     * Save tabActiveId for render.
+     * @param {any} state
+     * @param {array} tabActiveId
+     */
+    updateTabActiveId(state, tabActiveId) {
+      state.tabActiveId = tabActiveId;
     }
   }
 };
