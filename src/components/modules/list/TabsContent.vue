@@ -54,7 +54,7 @@ export default {
       });
     },
     goToDetails(event) {
-      // Link to event.target
+      this.$router.push('/details');
     }
   },
   mounted() {
