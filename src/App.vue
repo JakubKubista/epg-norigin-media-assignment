@@ -21,14 +21,12 @@ export default {
     Toolbar,
     BottomNavigation
   },
-  data() {
-    return {
-      toolbarBackground: "#000000"
-    };
-  },
   computed: {
     toolbarIconLeft() {
       return this.$route.name === "list" ? "person" : "arrow_back_ios";
+    },
+    toolbarBackground() {
+      return this.$route.name === "list" ? "#000000" : "rgba(0,0,0,0.7)";
     }
   },
   methods: {

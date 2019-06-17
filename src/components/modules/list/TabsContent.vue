@@ -55,6 +55,7 @@ export default {
     },
     goToDetails(event) {
       this.$router.push('/details');
+      document.getElementById("app").style.backgroundColor = "#000000";
     }
   },
   mounted() {

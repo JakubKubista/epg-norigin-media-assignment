@@ -34,6 +34,7 @@ export default {
   methods: {
     goBack() {
       if (this.$route.name === "details") this.$router.back();
+      document.getElementById("app").style.backgroundColor = "#181818";
     }
   }
 };

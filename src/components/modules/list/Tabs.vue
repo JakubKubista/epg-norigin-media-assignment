@@ -51,10 +51,10 @@ export default {
     notAvailable: () => Labels.message.fullScreen.notAvailable
   },
   methods: {
-    ...mapActions("list", ["updateTabActiveId"]),
+    ...mapActions("list", ["updateTabActiveId"])
   },
   directives: {
     dragscroll: dragscroll
-  },
+  }
 };
 </script>
