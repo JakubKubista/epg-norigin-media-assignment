@@ -1,11 +1,11 @@
 <template>
-  <v-tabs v-model="active"
+  <v-tabs :value="tabActiveId"
           show-arrows
           dark
           hide-slider
           centered
           color="#252525"
-          @change="$emit('changed', $event)">
+          @change="updateTabActiveId($event)">
 
     <v-tab v-for="i in count"
            :key="i"
@@ -21,7 +21,7 @@
       <v-tab-item v-for="i in count"
                   :key="i"
                   :value="'tab-' + i">
-        <Content v-if="i===tabMiddle" />
+        <Content v-if="i===tabMiddleNumber" />
         <h2 v-else
             class="md-message-content-centred">
           {{ notAvailable }}
@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import { mapState, mapActions } from "vuex";
 import Dates from "@/utils/constants/dates";
 import Labels from "@/utils/constants/labels";
 import Content from "@/components/modules/list/TabsContent";
@@ -44,26 +45,16 @@ export default {
     Content,
     Tab
   },
-  data() {
-    return {
-      active: null
-    };
-  },
   computed: {
+    ...mapState("list", ["tabActiveId", "tabMiddleNumber"]),
     count: () => Dates.count,
-    tabMiddle: () => Dates.count / 2,
     notAvailable: () => Labels.message.fullScreen.notAvailable
   },
   methods: {
-    defaultTab() {
-      this.active = "tab-" + this.tabMiddle;
-    }
+    ...mapActions("list", ["updateTabActiveId"]),
   },
   directives: {
     dragscroll: dragscroll
   },
-  mounted() {
-    this.defaultTab();
-  }
 };
 </script>

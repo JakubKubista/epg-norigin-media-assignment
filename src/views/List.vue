@@ -2,14 +2,15 @@
   <div class="md-content-program">
     <ButtonIcon @click="favourite = $event"
                 :icon="star" />
-    <Tabs @changed="tabActive=$event" />
+    <Tabs />
     <v-btn class="md-button-scrollbar"
-           v-show="tabActive==='tab-'+tabMiddle"
+           v-show="tabActiveId==='tab-'+tabMiddleNumber"
            @click="setDefaultScrollPosition"> {{ now }} </v-btn>
   </div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 import Dates from "@/utils/constants/dates";
 import Icons from "@/utils/constants/icons";
 import Labels from "@/utils/constants/labels";
@@ -25,22 +26,18 @@ export default {
   },
   data() {
     return {
-      favourite: false,
-      tabActive: ""
+      favourite: false
     };
   },
   computed: {
+    ...mapState("list", ["tabActiveId", "tabMiddleNumber"]),
     star: () => Icons.star,
-    now: () => Labels.button.now,
-    tabMiddle: () => Dates.count / 2
+    now: () => Labels.button.now
   },
   methods: {
     setDefaultScrollPosition() {
       Scrollbar.setDefaultScrollPosition();
     }
-  },
-  mounted() {
-    this.tabActive = this.tabMiddle;
   }
 };
 </script>
