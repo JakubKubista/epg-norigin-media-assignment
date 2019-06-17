@@ -29,6 +29,11 @@ export default {
   },
   computed: {
     img: () => require("@/assets/images/logo.png")
-  }
+  },
+  methods: {
+    goBack() {
+      this.$router.back();
+    },
+  },
 };
 </script>
