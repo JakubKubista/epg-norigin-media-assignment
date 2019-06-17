@@ -15,7 +15,8 @@
                class="md-schedule">
             <Card :title="schedule.title"
                   :start="schedule.start"
-                  :end="schedule.end" />
+                  :end="schedule.end"
+                  @clicked="goToDetails(schedule.id)" />
           </div>
         </div>
       </div>
@@ -52,6 +53,9 @@ export default {
       Api.callService({ method: "get", service: "epg" }).then(response => {
         this.updateChannels(response.data.channels);
       });
+    },
+    goToDetails(event) {
+      // Link to event.target
     }
   },
   mounted() {

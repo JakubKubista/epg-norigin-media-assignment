@@ -1,6 +1,6 @@
 <template>
   <v-card class="md-card-schedule"
-          @click="onClick">
+          @click="$emit('clicked', $event)">
     <div class="md-title"> {{ title }} </div>
     <span class="md-subtitle"> {{ subtitle }} </span>
   </v-card>
@@ -28,9 +28,6 @@ export default {
     dates: () => Dates
   },
   methods: {
-    onClick() {
-      this.$emit("click");
-    },
     setSubtitle() {
       let start = Dates.getHourAndMinute(new Date(this.start));
       let end = Dates.getHourAndMinute(new Date(this.end));
